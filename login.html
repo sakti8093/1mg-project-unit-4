@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <button onclick="loginPopUp()">LOGIN</button>
+  <div id="parentlogin">
+   <div id="boxShadowlogin">
+    <div id="login" >
+        <div id="closepopUp" >
+        <button  onclick="closePopUp()" > X </button>
+    </div>
+        <div id="loginLogo">
+            <h2>LOGIN</h2>
+            <div style="color:#787777 ;font-size:15px;  " >Get access to your orders, lab tests & doctor consultations</div>
+        </div>
+        <form action="">
+            <input type="text" placeholder="Enter Your Email ID or Mobile Number">
+            <input type="submit" value="LOGIN">
+        </form>
+        <div id="LoginLinks">
+            <div>
+          <p>New on 1mg?<a style="color:#e56060" href="">Sign Up</a></p>
+          <p>Have a Corporate account?<a style="color:#e56060" href="">Click Here</a></p>
+          <p >By logging in,you agree to our <span style="text-decoration:underline;">Terms and Condition</span> &
+            <span style="text-decoration:underline;">Privacy Policy</span></p>
+            <span><a style="color:#e56060" href="">Need Help? Get In Touch</a></span>
+        </div>
+        </div>
+    </div>
+   </div>
+</div>
+
+</body>
+</html>
+<script>
+function loginPopUp(){
+    document.getElementById("login").style.display="flex";
+    document.getElementById("boxShadowlogin").style.display="flex";
+    
+}
+function closePopUp(){
+    document.getElementById("login").style.display="none";
+    document.getElementById("boxShadowlogin").style.display="none";
+}
+</script>
