@@ -23,13 +23,7 @@
     justify-content: center;
     align-items: center;
 }
-#childSignUp{
-    width: 100%;
-    height: 100vh;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
+
 #container{
     /* border: 3px solid black; */
     display: none;
@@ -126,12 +120,12 @@ color:#636363 ;
  font-family: 'Raleway', sans-serif;
    font-family: 'Roboto Mono', monospace;
 }
-#closePopUp>button{
+#closepopUp>button{
  border: 0px;
  cursor: pointer;
  padding: 0px;
 }
-#closePopUp{   
+#closepopUp{   
 display: flex;
 justify-content: flex-end;
 margin-top: -14px;
@@ -148,8 +142,8 @@ margin-left: 50px;
 }
 .form-label {
 	position:absolute;	
-    top: 307px;
-    left: 780px;
+    top: 302px;
+    left: 790px;
     cursor:text;
 	cursor: pointer;
 	transition: all .15s ease-in-out 0s;
@@ -160,12 +154,12 @@ label {
     font-size: 18px;
 }
 .form-textbox:focus ~ .form-label,
-.form-textbox:valid ~ .form-label {
+.form-textbox:valid ~ .form-label ,.form-textbox:focus ~.form-labelVerify,.form-textbox:valid ~ .form-labelVerify{
 	top:277px;
 	font-size: .9em;
 	cursor: pointer;
 }
-.btnPage{
+.btndeco{
     text-decoration: underline;
     border: 0;
     background-color: transparent;
