@@ -91,10 +91,10 @@
     }
     #fourthcontainer
     {
-        
+        gap: 20px;
         display: flex;
         justify-content: space-evenly;
-        width: 95%;
+        width: 90%;
         margin: auto;
     }
     #fourthcontainer>div
@@ -142,11 +142,7 @@
         display: flex;
         width: 100%;
     }
-    .fa-brands
-    {
-        font-size: 30px;
-        margin-right: 07px;
-    }
+    
     #sixthcontainerfirstdiv
     {
         color: rgb(102,102,102);
@@ -158,6 +154,13 @@
     hr
     {
         width: 80%;
+    }
+   
+    .fa-brands
+    {
+        font-size: 30px;
+        margin-right: 07px;
+        color: black;
     }
 
 </style>
@@ -186,15 +189,15 @@
             </div>
             <div>
                 <input type="text" placeholder="Enter Phone Number">
-                <button>send link</button>
+                <button id="sendlink">send link</button>
             </div>
         </div>
          </div>
         <div id="thirdContainer">
             <div>
               <h4>Know Us</h4>
-              <p>About Us<p>
-               <p>Contact Us</p>
+             <p>About Us<p>
+              <p>Contact Us</p>
                <p>Press Coverage</p>
                <p>Careers</p>
                <p>Business Partnership</p> 
@@ -213,7 +216,6 @@
             </div>
             <div>
                 <h4>Our services</h4>
-                <p>About Us<p>
                     <p>Order Medicines</p>
                     <p>Book Lab Tests</p>
                     <p>Consult a Doctor</p> 
@@ -224,15 +226,15 @@
             <div>
                 <h4>Connect</h4>
                 <p>social links<p>
-                <div><i class="fa-brands fa-square-youtube"></i> <i class="fa-brands fa-square-facebook"></i> <i class="fa-brands fa-square-twitter"></i> 
+                <div><a href="https://www.youtube.com/c/1mgofficial"><i class="fa-brands fa-square-youtube"></i></a> </i> <a href="https://www.facebook.com/1mgOfficial"> <i class="fa-brands fa-square-facebook"></i> </a> <i class="fa-brands fa-square-twitter"></i> 
                 <i class="fa-brands fa-linkedin"></i></div>
                 <p>Want daily dose of health ?</p>
                 <button id="sIgn"><b>SIGN UP</b> </button>
             </div>
             <div>
              <b></b><h4>Download App</h4>
-             <img class="logO" src="https://mediaserver.goepson.com/ImConvServlet/imconv/a86a6a0d739ae80d874bc8a41608962eccd24896/original" alt=""><br>
-             <img class="logO" src="https://www.missionviejochamber.com/uploads/1/1/5/3/115365123/apple-app-store_orig.jpg" alt="">
+           <a href="https://play.google.com/store/apps/details?id=com.aranoah.healthkart.plus"> <img class="logO" src="https://mediaserver.goepson.com/ImConvServlet/imconv/a86a6a0d739ae80d874bc8a41608962eccd24896/original" alt=""><br></a> 
+            <a href="https://itunes.apple.com/in/app/1mg/id554578419?mt=8"><img class="logO" src="https://www.missionviejochamber.com/uploads/1/1/5/3/115365123/apple-app-store_orig.jpg" alt=""></a> 
             </div>
         </div>
         <div id="fourthcontainer">
@@ -278,3 +280,10 @@
     </div>
 </body>
 </html>
+<script>
+    document.querySelector("#sendlink").addEventListener("click",SendLink);
+    function SendLink()
+    {
+        alert("link sent successfully !")
+    }
+</script>
