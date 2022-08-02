@@ -1,3 +1,14 @@
+function SignUpclosePopUp(){
+    document.getElementById("SignUpcontainer").style.display="none";
+    document.getElementById("parentSignUp").style.display="none";
+    document.getElementById("childSignUp").style.display="none";
+}
+function SignUpPopUp(){
+document.getElementById("SignUpcontainer").style.display="flex";
+document.getElementById("parentSignUp").style.display="flex";
+document.getElementById("childSignUp").style.display="flex";
+}
+
 document.querySelector("#SignUpId").addEventListener("submit",getdata);
 var signUpdata =JSON.parse(localStorage.getItem("SignUpInfo")) || [];
 function getdata(){
@@ -15,14 +26,7 @@ function getdata(){
     alert("Signed Up Successfully");
     window.open("index.html","_self");
 }
-    function closePopUp(){
-        document.getElementById("container").style.display="none";
-        document.getElementById("parentSignUp").style.display="none";
-        document.getElementById("childSignUp").style.display="none";
-    }
-    function SignUpPopUp(){
-    document.getElementById("container").style.display="flex";
-    document.getElementById("parentSignUp").style.display="flex";
-    document.getElementById("childSignUp").style.display="flex";
-    }
-
+function changeToLogin(){
+    loginPopUp();
+    SignUpclosePopUp();
+}
