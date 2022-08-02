@@ -15,7 +15,7 @@ var loginInfo = JSON.parse(localStorage.getItem("SignUpInfo")) || [];
 function setData(){
 event.preventDefault();
 var Mobileno = document.querySelector(".form-textbox").value;
-var LoginPass = document.querySelector("LoginPassword").value;
+var LoginPass = document.querySelector("#LoginPassword").value;
 
 var flag = false;
    if(loginInfo==[]){
@@ -28,7 +28,7 @@ var flag = false;
 })
    }
    if(flag==true){
-    alert("Sign in Succesfull");
+    alert("Sign in Succesfully");
     window.open("index.html","_self")
    }else{
     alert("wrong Credentials")
