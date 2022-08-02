@@ -56,10 +56,6 @@ font-weight: bolder;
 border:0 ;
 margin-bottom: -40px;
 }
-/* form{
- padding: 50px;
-
-} */
 #SignUpLinks>div{
 display: flex;
 flex-direction: column;
@@ -89,7 +85,7 @@ font-family: 'Ubuntu', sans-serif;
  padding: 5px;
 }
 #SignUpimg{
-  /* border: 1px solid blue; */
+
   margin: auto;
  margin-right: 50px;
  padding: 50px;
@@ -104,29 +100,12 @@ text-align: center;
 font-size:12px ;
 color: #747373;
 }
-/* #queries{
-text-align: center;
-width: 200px;
-margin-left: 14px;
-color:#636363 ;  
-} */
 #SignUpLogo>h2{
  font-weight: bold;
  font-family: 'Raleway', sans-serif;
    font-family: 'Roboto Mono', monospace;
 }
-/* #closepopUp>button{
- border: 0px;
- cursor: pointer;
- padding: 0px;
-} */
-/* #closepopUp{   
-display: flex;
-justify-content: flex-end;
-margin-top: -14px;
-margin-right: -9px;
-font-family: 'Roboto Condensed', sans-serif;
-} */
+
 #SignUpText{
  margin-top: -10px;
  width: 390px;
@@ -135,14 +114,6 @@ font-family: 'Roboto Condensed', sans-serif;
 #SignUpLogo{
 margin-left: 50px;
 }
-/* .form-label {
-	position:absolute;	
-    top: 235px;
-    left: 640px;
-    cursor:text;
-	cursor: pointer;
-	transition: all .15s ease-in-out 0s;
-} */
 .Passwordform-label{
     position:absolute;	
     top: 363px;
@@ -157,11 +128,6 @@ margin-left: 50px;
 	font-size: .9em;
 	cursor: pointer;
 }
-/* label {
-    color: #808080;
-    font-family: 'Zilla Slab', serif;
-    font-size: 18px;
-} */
 .SignUpform-textbox:focus ~ .form-label,
 .SignUpform-textbox:valid ~ .form-label{
 	top:205px;
