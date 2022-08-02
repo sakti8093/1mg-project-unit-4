@@ -8,15 +8,13 @@ function getdata(){
         MobileNumber: mobileNumber,
         Password:SignUpPass,
     };
-    
     signUpdata.push(userData);
     localStorage.setItem("SignUpInfo",JSON.stringify(signUpdata));
     document.querySelector(".SignUpform-textbox").value="";
     document.querySelector("#SignUpPassword").value="";
-    alert("Sign Up Successfully");
+    alert("Signed Up Successfully");
+    window.open("index.html","_self");
 }
-
-
     function closePopUp(){
         document.getElementById("container").style.display="none";
         document.getElementById("parentSignUp").style.display="none";
