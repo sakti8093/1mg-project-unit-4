@@ -26,10 +26,13 @@
 
 #container{
     /* border: 3px solid black; */
+    width: 55%;
+    margin: auto;
     display: none;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: rgb(255,255,255);
     border-radius: 10px;
     padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 input[type="text"],input[type="password"]{
  width: 100%;
@@ -123,13 +126,16 @@ color:#636363 ;
 #closepopUp>button{
  border: 0px;
  cursor: pointer;
- padding: 0px;
+ padding: 1px;
 }
 #closepopUp{   
+    width: 10%;
+    margin: auto;
+    /* border: 2px solid red; */
 display: flex;
 justify-content: flex-end;
 margin-top: -14px;
-margin-right: -9px;
+margin-right: -1px;
 font-family: 'Roboto Condensed', sans-serif;
 }
 #loginText{
@@ -140,18 +146,24 @@ font-family: 'Roboto Condensed', sans-serif;
 #loginLogo{
 margin-left: 50px;
 }
-.form-label {
-	position:absolute;	
-    top: 235px;
-    left: 645px;
+.form-label{
+    position:absolute;	
+    top: 225px;
+    left: 785px;
     cursor:text;
 	cursor: pointer;
 	transition: all .15s ease-in-out 0s;
 }
+.form-textbox:focus ~ .form-label,
+.form-textbox:valid ~ .form-label {
+	top:205px;
+	font-size: .9em;
+	cursor: pointer;
+}
 .LoginPassform-label{
     position:absolute;	
-    top: 370px;
-    left: 645px;
+    top: 359px;
+    left: 785px;
     cursor:text;
 	cursor: pointer;
 	transition: all .15s ease-in-out 0s;
@@ -167,12 +179,7 @@ label {
     font-family: 'Zilla Slab', serif;
     font-size: 18px;
 }
-.form-textbox:focus ~ .form-label,
-.form-textbox:valid ~ .form-label {
-	top:205px;
-	font-size: .9em;
-	cursor: pointer;
-}
+
 .btndeco{
     text-decoration: underline;
     border: 0;

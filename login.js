@@ -33,5 +33,11 @@ var flag = false;
    }else{
     alert("wrong Credentials")
    }
+   document.querySelector(".form-textbox").value="";
+   document.querySelector("#LoginPassword").value="";
+}
+function changeToSignUp(){
+    SignUpPopUp();
+    closePopUp();
 }
 
