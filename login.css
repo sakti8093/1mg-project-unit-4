@@ -31,18 +31,18 @@
     border-radius: 10px;
     padding: 30px;
 }
-input[type="text"]{
+input[type="text"],input[type="password"]{
  width: 100%;
  margin-bottom :100px;
  padding: 6px;
  border: 0;
  border: none;
  border-bottom: 3px solid #ff6f61;
- font-size: 15px;
+ font-size: 18px;
  box-sizing: border-box;
  font-family: 'Zilla Slab', serif;
 }
-input[type="text"]:focus{
+input[type="text"]:focus,input[type="password"]:focus{
 outline: none;
 }
 input[type="submit"]{
@@ -142,11 +142,25 @@ margin-left: 50px;
 }
 .form-label {
 	position:absolute;	
-    top: 302px;
-    left: 790px;
+    top: 235px;
+    left: 645px;
     cursor:text;
 	cursor: pointer;
 	transition: all .15s ease-in-out 0s;
+}
+.LoginPassform-label{
+    position:absolute;	
+    top: 370px;
+    left: 645px;
+    cursor:text;
+	cursor: pointer;
+	transition: all .15s ease-in-out 0s;
+}
+.LoginPass-textbox:focus ~ .LoginPassform-label,
+.Loginform-textbox:valid ~ .LoginPassform-label{
+	top:340px;
+	font-size: .9em;
+	cursor: pointer;
 }
 label {
     color: #808080;
@@ -154,8 +168,8 @@ label {
     font-size: 18px;
 }
 .form-textbox:focus ~ .form-label,
-.form-textbox:valid ~ .form-label ,.form-textbox:focus ~.form-labelVerify,.form-textbox:valid ~ .form-labelVerify{
-	top:277px;
+.form-textbox:valid ~ .form-label {
+	top:205px;
 	font-size: .9em;
 	cursor: pointer;
 }
