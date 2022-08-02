@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="signUp.css">
+    <script src="https://kit.fontawesome.com/a2c7043569.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button onclick="SignUpPopUp()">Sign Up</button>
+    <div id="parentSignUp">
+        <div id="childSignUp">
+         <div id="container">
+           
+             <div id="SignUpimg">
+            <img src="http://drive.google.com/uc?export=view&id=1DQvQJTArdO5MmEr5_IAr8pQILu9YzhPv" alt="logoImg">
+             <div>
+                 <h4 id="queries">Health Related Queries</h4>
+                 <p id="SignUpImgtext">consult our certified doctors from anywhere,anytime
+                  and for free. We guarantee your Privacy.
+                 </p>
+                </div>
+             </div>
+             
+             <div id="SignUpform">
+                 <div id="closepopUp">
+                     <button  onclick="closePopUp()" ><i class="fa-solid fa-xmark"></i></button>
+                 </div>
+                 <div id="SignUpLogo">
+                     <h2>Sign Up</h2>
+                     <p id="SignUpText" style="color:#787777 ;font-size:15px;" >Please enter your Mobile number And Password</p>
+                 </div>
+                 <form action="" id="SignUpId">
+                    <input type="text" id="SignUpform-email" class="SignUpform-textbox" required>
+                    <label for="form-email" class="form-label">Enter Your Mobile Number</label>
+                    <input type="password" id="SignUpPassword" class="SignUpPass-textbox"  required>
+                    <label for="form-email" class="Passwordform-label">Enter Your Password</label>
+                     <input type="submit" value="CONTINUE">
+                 </form>
+                 <div id="SignUpLinks">
+                     <div>
+                   <p>Have an Account?<button class="btndeco">Login</button></p>
+                   <p>Have a Corporate account?<a style="color:#e56060" href="">Click Here</a></p>
+                   <p >By logging in,you agree to our <span style="text-decoration:underline;">Terms and Condition</span> &
+                     <span style="text-decoration:underline;">Privacy Policy</span></p>
+                     <span><a style="color:#e56060" href="">Need Help? Get In Touch</a></span>
+                 </div>
+             </div>
+             </div> 
+         </div>
+        </div>
+       </div>
+</body>
+</html>
+<script src="signUp.js"></script>
