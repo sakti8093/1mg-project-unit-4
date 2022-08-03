@@ -57,6 +57,64 @@
         height: 40px;
         outline: none;
     }
+    .labelEdit
+    {
+        position: absolute;
+        top: 270px;
+        margin-left: -700px;
+        transition: all .15s ease-in-out 0s;
+        cursor: text;
+        cursor: pointer;
+    }
+    #enter:focus ~ .labelEdit
+    #enter:valid ~ .labelEdit
+    {
+        top: 240px;
+        cursor: pointer;
+    }
+   #between
+    { 
+        width: 80%;
+        margin: auto;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    #between>h3
+    {
+        margin-top: 40px;
+        font-family: 'Open Sans', sans-serif;
+        color: rgb(147,147,147);
+        font-size: 20px;
+    }
+    #second
+    {
+        background-color: rgb(232, 231, 231)
+    }
+    #second2
+    {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        gap: 10px;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+    #second2>div
+    {
+        width: 90%;
+        
+    }
+    #second2>div>img{
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    #second2>div>p
+    {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: small;
+    }
    #third
     {
         text-align: center;
@@ -147,8 +205,14 @@
     }
     #fifth>div>h3
     {
-        margin-top: -40px;
+        margin-top: -20px;
         font-family: 'Open Sans', sans-serif;
+    }
+    #cust
+    {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        color: black;
     }
     #seven
     {
@@ -236,3 +300,19 @@
         font-size: 20px;
         font-weight: 600;
     }
+    
+    .carousel{
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .carousel-inner{
+        height: 200px;
+      }
+      .carousel-caption{
+        color:black;
+        top: 50%;
+      }
+      .carousel-control-next,
+      .carousel-control-prev /*, .carousel-indicators */ {
+          filter: invert(100%);
+      }
