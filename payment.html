@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>payment_page</title>
     <style>
-body{
+        body{
     margin: 0%;
     background: whitesmoke;
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;;
 }
+/* header */
 #payment_header{
    display: flex;
    justify-content: space-between;
@@ -29,6 +31,7 @@ body{
    margin-left: 30px;
    height: 60px;
 }
+/* footer */
 #payment_footer{
  display: flex;
  width: 80%;
@@ -52,6 +55,7 @@ body{
    color: lightsalmon;
 }
 
+/* payment_main */
 #payment_main{
    display: flex;
    width: 80%;
@@ -113,12 +117,12 @@ width: 25px !important;
 height: 25px;
 }
 #card_payment_btn{
- margin-top: 20px;
+   margin-top: 20px;
  margin-left: 60%;
  margin-bottom: 80px;
  padding: 10px 8px 10px 8px ;
- color:crimson;
- background: blue;
+ color: white;
+ background: #ff6f61;
  border: none;
  border-radius: 5px;
  cursor: pointer;
@@ -223,11 +227,6 @@ height: 25px;
    height: 40px;
    cursor: pointer;
 }
-#cardpaymentbtn{
-   background-color: goldenrod;
-   border-radius: 8px;
-   border: none;
-}
     </style>
 </head>
 <body>
@@ -235,7 +234,7 @@ height: 25px;
     <div id="payment_header">
            <div>
              <img id="mg_home" src="https://www.1mg.com/images/tata_1mg_logo.svg"/>
-             <img src="./images/payment_page_img.png" alt="">
+             <img src="https://www.pngmart.com/image/tag/payment" alt="">
            </div>
         <div id="need_help">Need Help?</div>
     </div>
@@ -282,7 +281,7 @@ height: 25px;
          <div id="date_code">
             <div>
                 <p>Expiry Date (MM/YY)</p>
-                <input id="exp_date" type="month" placeholder="DD/MM/YR">
+                <input id="exp_date" type="month" placeholder=" MM / YY">
             </div>
 
             <div>
@@ -301,7 +300,7 @@ height: 25px;
          </div>
 
          <div>
-            <button id="cardpaymentbtn">MAKE PAYMENT</button>
+            <button id="card_payment_btn">MAKE PAYMENT</button>
          </div>
 
          <div id="card_brands">
@@ -339,7 +338,7 @@ height: 25px;
                  <p>How 1mgCash works?</p>
              </div>
            </div>
-
+           
            <div id="mrp_summary">
                <div>
                    <p>Item Total(MRP)</p>
@@ -408,7 +407,7 @@ document.getElementById("to_be_paid").textContent = `₹ ${tbp}`;
 document.getElementById("total_savings_amount").textContent = `₹ ${
   b[0] - b[1]
 }`;
-document.querySelector("#cardpaymentbtn").addEventListener("click", () => {
+document.querySelector("#card_payment_btn").addEventListener("click", () => {
   let flag = true;
   let card_number = document.querySelector("#card_num").value;
   let exp_date = document.querySelector("#exp_date").value;
@@ -432,7 +431,7 @@ document.querySelector("#cardpaymentbtn").addEventListener("click", () => {
   }
   if (flag == true) {
     alert("payment Successfull");
-    window.location.href = "C:\Users\User\OneDrive\Desktop\masai1mg project\thank.html";
+    window.location.href = "thanK.html";
   }
 });
 
@@ -462,9 +461,7 @@ document
     }
     if (flag == true) {
       alert("payment Successfull");
-      window.location.href = "C:\Users\User\OneDrive\Desktop\masai1mg project\thank.html";
+      window.location.href = "thank_you.html";
     }
   });
 </script>
-
-
