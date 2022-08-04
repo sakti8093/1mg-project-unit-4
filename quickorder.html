@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order with prescription | 1 mg</title>
+    <link rel="stylesheet" href="quickorder.css">
+    <script src="https://kit.fontawesome.com/baf72c5c26.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="fc">
+        <div>
+            <div>
+                <h4>Upoad prescription
+                </h4>
+                <P>Please attach a prescription to proceed</P>
+                <button id="btn1"><input type="file" id="file"><i class="fa-solid fa-file-arrow-up"></i><h3>UPLOAD NEW</h3></button>
+                <div><img id="appendHere" src="" alt=""></div>
+                <div id="appendDel">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="https://www.1mg.com/images/online_consultation/validate_rx.svg" alt="">
+            </div>
+            <div>
+                <li>Don’t crop out any part of the image</li>
+                <li>Avoid blurred image</li>
+                <li>Include details of doctor and patient + clinic visit date</li>
+                <li>Medicines will be dispensed as per prescription</li>
+                <li>Supported files type: jpeg , jpg , png , pdf</li>
+                <li>Maximum allowed file size: 5MB</li>
+            </div>
+        </div>
+    </div>
+    <div id="sc">
+        <div><button  id="btn2" >CONTINUE</button></div>
+        <div><a href="https://www.1mg.com/subscription-plan/subscriptions?referer=attach_rx_page&dcpFlowSource=order-with-prescription"><img src="https://onemg.gumlet.io/image/upload/v1625555741/xe6glhvttbkmqmbvrhle.png" alt=""></a></div>
+    </div>
+    <div id="tc">
+        <h5>Business Partnerships</h5>
+        <h5>About us</h5>
+        <h5>Contact us</h5>
+        <h5>Terms</h5>
+        <h5>Privacy Policy</h5>
+        <h5>Jobs</h5>
+    </div>
+    <div id="fourc">
+        <div>
+            <img src="https://static.legitscript.com/seals/729605.png" alt="">
+            <div><p>LegitScript is a verification and monitoring service for online pharmacies</p></div>
+        </div>
+        <div>
+            <img src="https://img.1mg.com/images/footer/trust-stamp-2-20mil.svg" alt="">
+            <div class="EVen"><p>Trusted by more than 20 million people</p></div>
+        </div>
+        <div>
+            <img src="https://onemg.gumlet.io/ii0pnk2hugxxv9lu3v5e.svg" alt="">
+            <div> <p>All content is authored by Tata 1mg Editorial Team</p></div> 
+        </div>
+        <div>
+            <img src="https://onemg.gumlet.io/URS_ebgmxc.png" alt="">
+           <div class="EVen"><p>We are certified
+            "ISO/IEC 27001:2013"</p></div> 
+        </div>
+    </div>
+    <div id="fivec">
+            <a href="https://www.facebook.com/1mgOfficial"><img src="https://onemg.gumlet.io/facebook-rebrand_ocvkak_1_cijmmc.svg" alt=""></a>
+            <a href="https://onemg.gumlet.io/twitter-rebrand_qiai2s_jpn2h3.svg"><img src="https://onemg.gumlet.io/twitter-rebrand_qiai2s_jpn2h3.svg" alt=""></a>
+            <a href="https://onemg.gumlet.io/linkedin-rebrand_tbeedv_zaflot.svg"><img src="https://onemg.gumlet.io/linkedin-rebrand_tbeedv_zaflot.svg" alt=""></a>
+    </div>
+    <p id="LastP">© 2022 Tata 1mg. All rights reserved.</p>
+    <img id="LastImg" src="https://www.1mg.com/images/tata_1mg_custom_footer.svg" alt="">
+</body>
+</html>
+<script>
+    document.querySelector("#file").addEventListener("change",getData);
+    
+    function getData()
+    {
+        // document.getElementById("appendDel").innerText="";
+        event.preventDefault();
+        console.log(this.files);
+        var reader=new FileReader();
+        reader.readAsDataURL(this.files[0]);
+        reader.addEventListener("load",ReadData);
+        function ReadData()
+        {
+        console.log(reader.result);
+        localStorage.setItem("image",reader.result)
+        }
+        
+        var recentImage=localStorage.getItem("image");
+        document.querySelector("#appendHere").setAttribute("src",recentImage);
+
+        document.getElementById("btn2").style.backgroundColor="rgb(255,111,97)";
+        document.getElementById("btn2").style.color="white";
+    }
+        // var btn=document.createElement("button");
+        // btn.innerText="Delete";
+        // btn.setAttribute("class","del");
+        // document.querySelector("#appendDel").append(btn);
+        // btn.style.display="none";
+</script>
