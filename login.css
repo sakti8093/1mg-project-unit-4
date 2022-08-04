@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-#Logincontainer{
+#containerlogin{
     /* border: 3px solid black; */
     width: 55%;
     margin: auto;
@@ -56,8 +56,9 @@ font-weight: bolder;
 border:0 ;
 margin-bottom: -40px;
 }
-.lsPadding{
+form{
  padding: 50px;
+
 }
 #LoginLinks>div{
 display: flex;

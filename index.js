@@ -107,3 +107,8 @@ function changeToLogin(){
     loginPopUp();
     SignUpclosePopUp();
 }
+document.querySelector("#sendlink").addEventListener("click",SendLink);
+function SendLink()
+{
+    alert("link sent successfully !")
+}
