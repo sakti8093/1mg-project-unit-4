@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart page</title>
+    <link rel="stylesheet" href="cartpage.css">
+</head>
+
+<body> 
+    <button><a href="multivitamin.html">Go to home page</a></button>
+    <div id="cartbar">
+        <div>Product</div>
+        <div>name</div>
+        <div>price</div>
+        <div>remove</div>
+
+    </div>
+    <div id="cartbody">
+        <div id="cart"></div>
+        <div id="cartright" >
+            <div id="promomain">
+                <div id="promodiv"> <input id="promo" type="text" placeholder="Enter code" >
+                    <button id="promobutton">apply promo</button> 
+            
+                </div>
+            </div>
+            <div id="totalbox">
+                <div>
+                    <div><p>Total</p></div>
+                    <div><p>Rs0</p></div>
+                </div>
+                <div>
+                    <div ><p>Shipping Fee</p></div>
+                     <div ><p>Free</p></div>
+                </div>
+                <div>
+                    <div><p>Discount</p></div>
+                    <div><p>-30%</p></div>
+                </div>
+                <div>
+                    <div><p>To Be Paid</p></div>
+                    <div id="total"></div>
+                </div>
+            </div>
+            <div>
+                <button>Checkout</button>
+            </div>
+            
+        </div>
+    </div>
+    <div id="total">  </div>
+    
+
+</body>
+</html>
+<script>
+
+var products=JSON.parse(localStorage.getItem("cart"))||[];
+// var cart=document.getElementById("cart");
+if(products.length===0) {
+    document.querySelector("h1").innerText = "Looks like no item in cart yet";
+    
+} else {
+    displayProducts();
+    cartValue();
+    promo()
+}
+
+function displayProducts(){
+    document.getElementById("cart").innerHTML="";
+    products.map(function(elem, index){
+        var div=document.createElement("div");
+        // div.setAttribute("class","products");
+
+        var imagediv =document.createElement("div");
+            imagediv.setAttribute("id","imagdiv");
+
+            var image =document.createElement("img");
+            image.setAttribute("src",elem.image_url);
+            image.setAttribute("alt",index);
+            imagediv.append(image);
+
+        var namediv =document.createElement("div");
+          namediv.setAttribute("id","name")
+            var p=document.createElement("p");
+            p.innerText=elem.name;
+            namediv.append(p);
+            
+
+
+              var pricediv= document.createElement("div")
+             pricediv.setAttribute("id","pricemaindiv")
+
+             var deletecart= document.createElement("p");
+            deletecart.innerText="Remove";
+            deletecart.addEventListener("click",function(){deleteThis(elem)});
+            console.log(deletecart);
+            pricediv.append(deletecart);
+           
+            var priceBox=document.createElement("div");
+            priceBox.setAttribute("id","caart");
+           
+           
+            var pricebox=document.createElement("div");
+            var price=document.createElement("p");
+            price.innerText=elem.price;
+            pricebox.append(price);
+            
+           
+        
+        priceBox.append(pricebox);
+
+        
+       
+            div.append(imagediv,namediv,priceBox,pricediv);
+        document.getElementById("cart").append(div);
+        
+    });
+}  
+
+
+
+
+
+function cartValue() {   
+document.getElementById("total").innerHTML="";
+    var total = products.reduce(function(acc,elem) {
+        return acc+elem.price;
+}, 0);
+console.log(total);
+var cartValuee =document.createElement("h5");
+cartValuee.setAttribute("id","update");
+var p=document.createElement("p");
+p.innerText="Total"
+cartValuee.innerText= total;
+document.getElementById("total").append(cartValuee)
+};
+
+function deleteThis(ele){
+        products.splice(ele,1);
+        localStorage.setItem("cart",JSON.stringify(products));
+        // document.getElementById("cartbutton").innerText=cartArr.length;
+        displayProducts();
+         cartValue();
+    }
+
+
+
+    // document.getElementById("cartbutton").innerText=cartArr.length;
+    function promo()
+    {
+        var applypromo= document.getElementById("promobutton");
+        applypromo.addEventListener("click",checkPromo);
+}
+        function checkPromo()
+        {
+           var val= document.getElementById("promo").value;
+            if(val=="masai30")
+            {
+                var total=products.reduce(function(acc,elem)
+                {
+                return acc + Number(elem.price);
+                },0);
+
+                total=total-Math.floor((30/100)*total);
+                document.getElementById("update").innerText=total;
+                alert("applied promo");
+            }
+            else
+            {
+                alert("wrong");
+            }
+        }
+</script>
+
+
