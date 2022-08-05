@@ -1,0 +1,318 @@
+ #first
+    {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        gap: 40px;
+    }
+    #first>div>video
+    {
+        width: 100%;
+        height: 600px;
+    }
+    #first>div>h2
+    {
+        color: rgb(158,158,158);
+        font-family: 'Open Sans', sans-serif;
+    }
+    #first>:first-child
+    {
+        width: 80%;
+    }
+    #first>:first-child>img
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #first>:first-child>button
+    {
+        background-color: rgb(255,111,97);
+        width: 30%;
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        color: white;
+        height: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    div>div>h1
+    {
+        margin-top: 50px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    div>div>h1>span
+    {
+        color: rgb(163,70,54);
+    }
+    input
+    {
+        margin-top: 40px;
+        width: 90%;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        height: 40px;
+        outline: none;
+    }
+    .labelEdit
+    {
+        position: absolute;
+        top: 270px;
+        margin-left: -700px;
+        transition: all .15s ease-in-out 0s;
+        cursor: text;
+        cursor: pointer;
+    }
+    #enter:focus ~ .labelEdit
+    #enter:valid ~ .labelEdit
+    {
+        top: 240px;
+        cursor: pointer;
+    }
+   #between
+    { 
+        width: 80%;
+        margin: auto;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    #between>h3
+    {
+        margin-top: 40px;
+        font-family: 'Open Sans', sans-serif;
+        color: rgb(147,147,147);
+        font-size: 20px;
+    }
+    #second
+    {
+        background-color: rgb(232, 231, 231)
+    }
+    #second2
+    {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        gap: 10px;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+    #second2>div
+    {
+        width: 90%;
+        
+    }
+    #second2>div>img{
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    #second2>div>p
+    {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: small;
+    }
+   #third
+    {
+        text-align: center;
+        margin-bottom: 90px;
+        font-family: 'Open Sans', sans-serif;
+    }
+   #third>h1
+   {
+    color: #9e9e9e ;
+   }
+    #fourth
+    {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 40px;
+        justify-content: space-evenly;
+    }
+    #fourFirstContainer
+    {
+        width: 30%;
+    }
+    #image
+    {
+        width: 100%;
+    }
+    #FourLastContainer
+    {
+        width: 40%;
+        display: flex;
+        gap: 20px;
+        
+    }
+    #containh1
+    {
+        margin-top: 50px;
+    }
+    #FourLastContainer>:last-child
+    {
+        margin-top: 90px;
+    }
+    #h3
+    {
+        font-family:sans-serif;
+        
+    }
+    #h1
+    {
+        font-size: 70px;
+        color: #c9cbcc;
+        font-family: sans-serif;
+    }
+    #p
+    {
+        font-family: 'Open Sans', sans-serif;
+        color: #616161;
+        font-size: 20px;
+    }
+    #fifth
+    {
+        display: flex;
+        border: 2px solid #cbcbcb;
+        width: 70%;
+        margin: auto;
+        height: 180px;
+        margin-bottom: 70px;
+    }
+    #fifth>div
+    {   
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width: 100%;
+        height: 150px;
+    }
+    #fifth>:nth-child(2)
+    {
+        border-right:2px solid #cbcbcb;
+        border-left:2px solid #cbcbcb;
+        height: 140px;
+    }
+    #fifth>div>h1
+    {
+        margin-top: -1px;
+       color: #ff8073;
+       font-size: 80px;
+       font-family: 'Open Sans', sans-serif;
+    }
+    #fifth>div>h3
+    {
+        margin-top: -20px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #cust
+    {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        color: black;
+    }
+    #seven
+    {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+    #seven>div
+    {
+        width: 20%;
+        text-align: center;
+    }
+    #seven>div>h3
+    {
+        font-family: 'Open Sans', sans-serif;
+        color: #656161;
+    }
+    #seven>div>p
+    {
+        color: #897581;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #nine
+    {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 60px;
+    }
+    #nine>h4
+    {
+        font-weight: normal;
+        font-size: 20px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #nine>p
+    {
+        color: #a7a2a7;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+    }
+    #eight
+    {
+        margin-top: 100px;
+        text-align: center;
+        margin-bottom: 100px;
+        color: rgb(158,158,158);
+        font-family: 'Open Sans', sans-serif;
+    }
+    #ten
+    {
+       
+        display: flex;
+        width: 60%;
+        margin: auto;
+        justify-content: space-around;
+    }
+    #ten>:first-child>img
+    {
+        width: 70%;
+    }
+    #ten>:last-child
+    {
+        font-family: sans-serif;
+        width: 30%;
+    }
+    #ten>:last-child>h3
+    {
+        font-size: 30px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #ten>:last-child>b
+    {
+        color: #9e9e9e;
+        font-family: sans-serif;
+    }
+    #ten>:last-child>a>button
+    {
+        background-color: #ff6f61;
+        border: none;
+        width: 100%;
+        height: 50px;
+        color: white;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .carousel{
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .carousel-inner{
+        height: 200px;
+      }
+      .carousel-caption{
+        color:black;
+        top: 50%;
+      }
+      .carousel-control-next,
+      .carousel-control-prev /*, .carousel-indicators */ {
+          filter: invert(100%);
+      }

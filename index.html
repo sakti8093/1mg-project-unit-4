@@ -4,149 +4,2068 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavBar</title>
+    <title>Online Pharmacy India | 1mg</title>
     <link rel = "icon" href = "https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/a6f1a33b65b75d52472ed31a7f34117b" type = "image/x-icon">
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index.css"/>
+    <script src="https://kit.fontawesome.com/a2c7043569.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="navbar">
-        <div> <img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></div>
-        <div>
-            <div> <button style="color: red;">MEDICINES</button></div>
-            <div> <button>LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
-            <div> <button >CONSULT DOCTORS </button></div>
-            <div> <button>COVID-19</button></div>
-            <div> <button>AYURVEDA</button></div>
-            <div> <button>CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
+    <div id="landingpage">
+        <div class="navbar">
+            <div> <img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></div>
+            <div>
+                <div> <button style="color: red;">MEDICINES</button></div>
+                <div> <button onclick="return show('labtestspage','landingpage')">LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
+                <div> <button onclick="return show('consultdocpage','landingpage')">CONSULT DOCTORS </button></div>
+                <div> <button onclick="return show('covid19','landingpage')">COVID-19</button></div>
+                <div> <button onclick="return show('ayurvedapage','landingpage')">AYURVEDA</button></div>
+                <div> <button onclick="return show('careplanpage','landingpage')">CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
+            </div>
+            <div>
+                <div class="dropdown" id="pfpdiv">
+                    <button class="dropbtn" > 
+                        <img
+                            id="pfpimg";
+                            src="https://onemg.gumlet.io/profile-rebrand_aboy0q.svg";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 150px;">
+                        <a>Profile</a>
+                        <a>My orders</a>
+                        <a>Settings</a>
+                        <a>Log Out</a>
+                    </div>
+                </div>
+                <div id="logsign">
+                    <div><button onclick="loginPopUp()">Login</button></div>
+                    <div><button onclick="SignUpPopUp()">Sign up</button></div>
+                </div>
+                <div> <button onclick="return show('offerpage','landingpage')">Offers</button></div>
+                <div class="dropdown">
+                    <button class="dropbtn" > 
+                        <img
+                            id="cart";
+                            src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 250px;">
+                        <a>Order Summary 0</a>
+                        <a href="" style="text-align: center; color:  rgb(241, 90, 51);">PROCEED TO CART</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div >
+                <button style="color: rgb(241, 90, 51);">Need Help?</button>
+            </div>
+        </div>
+        <div class = "search">
+            <div>
+                <img
+                    src="https://p.kindpng.com/picc/s/108-1084414_small-location-svg-png-icon-free-download-location.png";
+                >
+                <input
+                    placeholder="Enter your city"
+                    style="margin-left: 10px;"
+                >            
+            </div>        
+            <div>            
+                <input
+                    placeholder="Search for Meidicines and Health Products"
+                    style="margin-left: 10px;"
+                >  
+                <img
+                    style="margin-left: 35px;"
+                    src="https://media.istockphoto.com/vectors/black-magnifying-glass-vector-icon-on-transparent-background-vector-id1026451496?k=20&m=1026451496&s=170667a&w=0&h=1_BWTKRZavERAgSBRyQqcHBrEYh5SSDu9nS6ffM7HyU=";
+                >          
+            </div>
+            <div id="n1">
+                <h4 style="font-size: 15px;">QUICK BUY! Get 25% off on medicines*</h4>
+                <div> <button>Quick order</button></div>
+            </div>
+        </div>
+    
+        <div class = "drop">
+            <div class = "dropdown">
+                <button class="dropbtn">Health Resource Center<i class="arrow right"></i></button>
+                <div class="dropdown-content" >
+                  <a href="#">All Diseases</a>
+                  <a href="#">All Medicines</a>
+                  <a href="#">Medicines by Therapeutic Class</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Vitamins & Nutrition<i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Vitamins & Supplements</a>
+                  <a href="#">Nutritional Drinks</a>
+                  <a href="#">Health Food & Drinks</a>
+                </div>
+            </div><div class = "dropdown">
+                <button class="dropbtn">Diabetes<i class="arrow right"></i></button>
+                <div class="dropdown-content" >
+                  <a href="#">Devices</a>
+                  <a href="#">Diabetic Medicines</a>
+                  <a href="#">Sugar Substitutes</a>
+                </div>
+            </div><div class = "dropdown">
+                <button class="dropbtn">Healthcare Devices<i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Top brands in Healthcare Devices</a>
+                  <a href="#">Masks (N95, Surgical and more)</a>
+                  <a href="#">Oxygen Concentrators & Cans</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Personal Care<i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Sexual Wellness</a>
+                  <a href="#">Skin Care</a>
+                  <a href="#">Hair Care</a>
+                  <a href="#">Women Care</a>
+                  <a href="#">Baby Care</a>
+                  
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Health Conditions<i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Stomach Conditions</a>
+                  <a href="#">Heart Care</a>
+                  <a href="#">Pain Relief</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Ayurveda Products <i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Ayurveda Top Brands</a>
+                  <a href="#">Top Health Concerns</a>
+                  <a href="#">Unani Medicines</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Homeopathy <i class="arrow right"></i></button>
+                <div class="dropdown-content" >
+                  <a href="#">Homeopathy Top Brands</a>
+                  <a href="#">Homeopathy Wellness Combos</a>
+                  <a href="#">Homeopathy Medicines</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Featured <i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Tata 1mg Health Products</a>
+                  <a href="#">Monsoon Store</a>
+                  <a href="#">Trending now</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Covid Essentials <i class="arrow right"></i></button>
+                <div class="dropdown-content" style="right: 0;">
+                  <a href="#">Covid-19 Self test kits</a>
+                  <a href="#">Oxygen Cans & Concentrators</a>
+                  <a href="#">Masks</a>
+                  <a href="#">Sanitizers & Handwash Products</a>
+                  <a href="#">Support Your Immunity</a>
+                  <a href="#">Thermometer</a>
+                  <a href="#">Chyawanprash</a>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="banner1">
+            <div>
+                <img
+                    src="https://onemg.gumlet.io/image/upload/w_1024,h_250,,a_ignore,q_auto,f_auto/v1658946472/bo5pxkbivx9zgf3fi3x1.png;"
+                >
+            </div>
+            <div>
+                <img
+                    src="https://onemg.gumlet.io/image/upload/w_480,h_200,,a_ignore,q_auto,f_auto/v1637650231/j1stwu7s3rtmyi8r5ruv.png;"
+                >
+            </div>
+            
+        </div>
+    
+        <div class="tata">
+            <h2>Tata 1mg: India's Leading Online Pharmacy & Healthcare Platform</h2>
+        </div>
+    
+        <div class="careplan">
+            <img
+                style="width: 100%;"
+                src="https://res.cloudinary.com/du8msdgbj/image/upload/v1647251796/ueyxzzku83yuvpqxyrwe.png";
+            >
         </div>
         <div>
-            <div> <button>Login</button></div>
-            <div> <button>Sign up</button></div>
-            <div> <button>Offers</button></div>
-            <div> <img id="cart"; src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";> </div>
+            <div class="featured">
+                <div>
+                    <h3 style="font-family: sans-serif;">Featured Brands</h3>
+                    <button style="width: 80px; height: 30px; margin-top: 10px;">SEE ALL</button> 
+                </div>        
+                <div>
+                    <div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1659090407/iprtlanatvfhat40frwr.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Dr. Willmar Schwabe India</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1658983624/kjla5x4xoifcd8zk7vbl.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Sri Sri Tattva</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1659090425/tou6e4icqmrcrbkha4j7.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Cetaphil</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1659090441/y7rt3a1n20ybxpsxibjm.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Muscle Blaze</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1659090458/j4gcjpfc6dze1gszpwhj.jpg";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Optimum Nutrition</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1658983563/ncrh9lnpbbbhj5xrhzvl.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Baidyanath</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1659090477/x3eticaxxyx3ghuuar72.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Bioderma</p>
+                        </div>            
+                    </div>
+                </div>            
+                
+            </div>
         </div>
         <div >
-            <button>Need Help?</button>
+            <div class="featured">
+                <div>
+                    <h3 style="font-family: sans-serif;">Popular Categories</h3>
+                    <button style="width: 80px; height: 30px; margin-top: 10px;">SEE ALL</button> 
+                </div>        
+                <div>
+                    <div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624525284/cabpuknnlyyzgqfnb4x5.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Vitamins & Supplements</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1649141994/x2z8u1osqutmxvx56hlw.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Ayurveda</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1658725767/fbigjgxv2wquqqb3galn.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Healthcare Devices</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1642586423/uq1gwxslqqrxxwv6zi6j.jpg";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Nutritional Drinks</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624525168/p1blaka183nc1zlil8tq.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Sexual Wellness</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624525320/j7ruar88gacbzksuadjn.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Homeopathy</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1658725792/h8qo5dk91lliwwihbwnf.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Diabetes Care</p>
+                        </div>
+            
+                    </div>
+                </div>            
+                
+            </div>
         </div>
-    </div>
-    <div class = "search">
-        <div>
+        <div >
+            <div class="featured">
+                <div>
+                    <h3 style="font-family: sans-serif;">Shop By Health Concerns</h3>
+                    <button style="width: 80px; height: 30px; margin-top: 10px;">SEE ALL</button> 
+                </div>        
+                <div>
+                    <div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524227/hgzkyio2rphkn6wjif94.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Diabetes Care</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524269/zo7sc14nqpt6ebeojkvr.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Cardiac Care</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524293/ttagxlnxulsvkyv9fetr.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Stomach Care</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524308/ijgn7fhyq8ig0welmrcp.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Liver Care</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524282/zytsldnf5mvb0u19ydep.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Kidney Care</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524210/ywohqm4txnehsmibypaz.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Bone, Joint & Muscle Care</p>
+                        </div>
+                        <div id="prd">
+                            <img
+                                src="https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524252/hn5bpr1ci2do5kdub51v.png";
+                            >
+                            <p style="padding: 0px 10px 0px 10px;">Pain Relief</p>
+                        </div>
+            
+                    </div>
+                </div>            
+                
+            </div>
+        </div>
+
+    </div>    
+
+    <div id="labtestspage">
+        <div class="navbar">
+            <div> <img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></div>
+            <div>
+                <div> <button onclick="return show('landingpage','labtestspage')">MEDICINES</button></div>
+                <div> <button style="color: red;">LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
+                <div> <button onclick="return show('consultdocpage','labtestspage')">CONSULT DOCTORS </button></div>
+                <div> <button onclick="return show('covid19','labtestspage')">COVID-19</button></div>
+                <div> <button onclick="return show('ayurvedapage','labtestspage')">AYURVEDA</button></div>
+                <div> <button onclick="return show('careplanpage','labtestspage')">CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
+            </div>
+            <div>
+                <div class="dropdown" id="pfpdiv">
+                    <button class="dropbtn" > 
+                        <img
+                            id="pfpimg";
+                            src="https://onemg.gumlet.io/profile-rebrand_aboy0q.svg";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 150px;">
+                        <a>Profile</a>
+                        <a>My orders</a>
+                        <a>Settings</a>
+                        <a>Log Out</a>
+                    </div>
+                </div>
+                <div id="logsign">
+                    <div><button onclick="loginPopUp()">Login</button></div>
+                    <div><button onclick="SignUpPopUp()">Sign up</button></div>
+                </div>
+                <div> <button onclick="return show('offerpage','labtestspage')">Offers</button></div>
+                <div class="dropdown">
+                    <img id="cart"; class="dropbtn"; src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";> 
+                    <div class="dropdown-content"style="right: 0; min-width: 250px;" >
+                        <a>Order Summary 0</a>
+                        <a href="#" style="text-align: center; color:  rgb(241, 90, 51);">PROCEED TO CART</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div >
+                <button style="color: rgb(241, 90, 51);">Need Help?</button>
+            </div>
+        </div>
+        <div class = "search">
+            <div>
+                <img
+                    src="https://p.kindpng.com/picc/s/108-1084414_small-location-svg-png-icon-free-download-location.png";
+                >
+                <input
+                    placeholder="Enter your city"
+                    style="margin-left: 10px;"
+                >            
+            </div>        
+            <div>            
+                <input
+                    placeholder="Search For Tests (CBC, MRI, etc.)"
+                    style="margin-left: 10px;"
+                >  
+                <img
+                    style="margin-left: 35px;"
+                    src="https://media.istockphoto.com/vectors/black-magnifying-glass-vector-icon-on-transparent-background-vector-id1026451496?k=20&m=1026451496&s=170667a&w=0&h=1_BWTKRZavERAgSBRyQqcHBrEYh5SSDu9nS6ffM7HyU=";
+                >          
+            </div>
+            <div id="n2">
+                <h4 style="font-size: 15px;">Upto 50% Off</h4>
+                <div style="width: 200px;"> <button>Book Test From Prescription</button></div>
+            </div>
+        </div>
+        <div class = "labtest">
+            <div>
+                <img 
+                    src="https://onemg.gumlet.io/assets/9aaa4ea0-dcf1-11ec-a049-0273d826c612.png?format=auto";
+                >
+            </div>
+            <div>
+                <h2>Lab Test From The Comfort Of Your Home</h2>
+                <h3>50,00,000+ lab tests booked | 20,00,000+ satisfied customers</h3>
+                <div id="safetyicon">
+                    <div>
+                        <div>
+                            <img
+                                src="https://onemg.gumlet.io/Safe_38x38_labs_oe5ieq.png?format=auto";
+                            >
+                        </div>                    
+                        <p>100% Safe & Hygienic</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                                src="https://onemg.gumlet.io/new_color_images/Lab_delivery_2x.png?format=auto";
+                            >
+                        </div>                    
+                        <p>Home Sample Pick Up</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                                src="https://onemg.gumlet.io/new_color_images/Lab_online_report_2x.png?format=auto";
+                            >
+                        </div>
+                        <p>View Reports Online</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                                src="https://onemg.gumlet.io/new_color_images/Lab_doctor_2x.png?format=auto";
+                            >
+                        </div>
+                        <p>Free Doctor Consultation</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                                src="https://onemg.gumlet.io/new_color_images/Lab_offer_2x.png?format=auto";
+                            >
+                        </div>
+                        <p>Best Prices Guaranteed</p>
+                    </div>
+                </div>
+                <div><button>View Popular Packages</button></div>
+            </div>        
+        </div>
+        <h2 style="margin-left: 80px; margin-top: 50px;">Popular Tests</h2>
+        <div class = "labtest2">
+            <div>
+                <div> 
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjpKBCiuSWu6ClLjxsFjjCCw-X0O1TMcjXgA&usqp=CAU";
+                    >
+                    <p>HEALTH TEST AT YOUR HOME</p>
+                </div>
+                <div>
+                    <div><input type="checkbox"> COVID-RPCTR</div>
+                    <div><input type="checkbox"> Diabetes Screening</div>
+                    <div><input type="checkbox"> Vitamin-D</div>
+                    <div><input type="checkbox"> Thyroid profile Total</div>
+                    <div><input type="checkbox"> Liver Funciton Test</div>
+                    <div><input type="checkbox"> Lipid Profile</div>
+                </div>
+            </div>
+            <div>
+                <div> 
+                    <img
+                        src="https://static.thenounproject.com/png/1631718-200.png";
+                    >
+                    <p>VISIT A LAB NEAR YOU</p>
+                </div>
+                <div>
+                    <div><input type="checkbox"> USG Whole Abdomen</div>
+                    <div><input type="checkbox"> X-Ray Chest PA View</div>
+                    <div><input type="checkbox"> ECG</div>
+                    <div><input type="checkbox"> MRI Brain</div>
+                    <div><input type="checkbox"> HRCT CHEST - Plain</div>
+                    <div><input type="checkbox"> CECT Whole Abdomen</div>
+                </div>
+            </div>
+    
+           
+            
+        </div>
+        <div id="subtest">
+            <button>FIND YOUR TEST</button>
+        </div>    
+        <div class = "banner2">
             <img
-                src="https://p.kindpng.com/picc/s/108-1084414_small-location-svg-png-icon-free-download-location.png";
+                src="https://onemg.gumlet.io/image/upload/v1638879963/kmwihensncrafu2klh4h.png";
             >
-            <input
-                placeholder="Enter your city"
-                style="margin-left: 10px;"
-            >            
+        </div>    
+        <div class="quality">
+            <div>
+                <h4>UNCOMPROMISED QUALITY. RELIABLE RESULTS. ALWAYS.</h4>
+                <p>Spending hours in a queue at a diagnostic lab or a hospital is now a thing 
+                    of the past. With Tata 1mg you can get your lab tests done from the comfort
+                    of your home. Our highly qualified phlebotomist will collect the samples at 
+                    your preferred time. Watch this video to see steps taken by us to ensure
+                    quality and hygiene in sample collection. Book your next lab test with Tata
+                    1mg at the lowest price guaranteed!</p>
+            </div>
+            <div>
+                <iframe src="https://www.youtube.com/watch?v=_Bk2_nFVRI0&ab_channel=Tata1mg"></iframe>
+            </div>
+    
         </div>
-        
-        <div>            
-            <input
-                placeholder="Search for Meidicines and Health Products"
-                style="margin-left: 10px;"
-            >  
-            <img
-                style="margin-left: 35px;"
-                src="https://media.istockphoto.com/vectors/black-magnifying-glass-vector-icon-on-transparent-background-vector-id1026451496?k=20&m=1026451496&s=170667a&w=0&h=1_BWTKRZavERAgSBRyQqcHBrEYh5SSDu9nS6ffM7HyU=";
-            >          
-        </div>
-        <div id="n1">
-            <h4 style="font-size: 15px;">QUICK BUY! Get 25% off on medicines*</h4>
-            <div> <button>Quick order</button></div>
+        <div class="contactus">
+            <h2>Want to book lab tests in bulk?</h4>            
+            <h4>Get Customized packages at best prices</h6>
+            <button onclick="return show('contactuspage','labtestspage')">CONTACT US</button>
         </div>
     </div>
 
-    <div class = "drop">
-        <div class = "dropdown">
-            <button class="dropbtn">Health Resource Center</button>
-            <div class="dropdown-content" >
-              <a href="#">All Diseases</a>
-              <a href="#">All Medicines</a>
-              <a href="#">Medicines by Therapeutic Class</a>
+    <div id="consultdocpage">
+        <div class="navbar">
+            <div> <img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></div>
+            <div>
+                <div> <button onclick="return show('landingpage','consultdocpage')">MEDICINES</button></div>
+                <div> <button onclick="return show('labtestspage','consultdocpage')">LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
+                <div> <button style="color: red;">CONSULT DOCTORS </button></div>
+                <div> <button onclick="return show('covid19','consultdocpage')">COVID-19</button></div>
+                <div> <button onclick="return show('ayurvedapage','consultdocpage')">AYURVEDA</button></div>
+                <div> <button onclick="return show('careplanpage','consultdocpage')">CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
+            </div>
+            <div>
+                <div class="dropdown" id="pfpdiv">
+                    <button class="dropbtn" > 
+                        <img
+                            id="pfpimg";
+                            src="https://onemg.gumlet.io/profile-rebrand_aboy0q.svg";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 150px;">
+                        <a>Profile</a>
+                        <a>My orders</a>
+                        <a>Settings</a>
+                        <a>Log Out</a>
+                    </div>
+                </div>
+                <div id="logsign">
+                    <div><button onclick="loginPopUp()">Login</button></div>
+                    <div><button onclick="SignUpPopUp()">Sign up</button></div>
+                </div>
+                <div> <button onclick="return show('offerpage','consultdocpage')">Offers</button></div>
+                <div class="dropdown">
+                    <img id="cart"; class="dropbtn"; src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";> 
+                    <div class="dropdown-content"style="right: 0; min-width: 250px;" >
+                        <a>Order Summary 0</a>
+                        <a href="" style="text-align: center; color:  rgb(241, 90, 51);">PROCEED TO CART</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div >
+                <button style="color: rgb(241, 90, 51);">Need Help?</button>
             </div>
         </div>
-        <div class = "dropdown">
-            <button class="dropbtn">Vitamins & Nutrition</button>
-            <div class="dropdown-content">
-              <a href="#">Vitamins & Supplements</a>
-              <a href="#">Nutritional Drinks</a>
-              <a href="#">Health Food & Drinks</a>
+        <div id="first">
+            <div>
+                <h1>
+                Consult with Doctors across 22+ Specialities,<br>
+                over <span>Chat, Video & Voice calls.</span> </h1>
+                <h2>Skip the struggle of booking appointments. <br>
+                    Consult a doctor at your ease</h2>
+                
+                <label for="enter" class="labelEdit">input query</label>
+                <input type="text" id="enter" placeholder="">
+                <button>CONSULT NOW</button>
+                <img src="https://onemg.gumlet.io/image/upload/v1625554511/mqz0j8blegoylexsvtsl.png" alt="">
             </div>
-        </div><div class = "dropdown">
-            <button class="dropbtn">Diabetes</button>
-            <div class="dropdown-content" >
-              <a href="#">Devices</a>
-              <a href="#">Diabetic Medicines</a>
-              <a href="#">Sugar Substitutes</a>
+            <div id="vid">
+                <video  autoplay loop muted >
+                    <source src="https://onemg.gumlet.io/eConsult-final_ro63yx.webm" type="video/webm">
+                  </video>
             </div>
-        </div><div class = "dropdown">
-            <button class="dropbtn">Healthcare Devices</button>
-            <div class="dropdown-content">
-              <a href="#">Top brands in Healthcare Devices</a>
-              <a href="#">Masks (N95, Surgical and more)</a>
-              <a href="#">Oxygen Concentrators & Cans</a>
+        </div> 
+        <div id="second">
+            <div id="between">
+                <h3>Chat with our specialist doctors</h3>
+            </div>
+            <div id="second2">
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/liinlnkozof8mdtelot2.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/fcqsjqyummdc0wv8eepm.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/zsreblulpofk1bqqi0vp.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/y7x2wylau943va6dcxyr.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/tesj5p15sruirjuy9jix.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/Kaya-Clinic-Logo.png" alt="">
+                    <p>General Physician</p>
+                </div>
+            </div>     
+        </div>
+        <div id="third">
+            <h1>How Online Doctor Consultaion Works</h1>
+        </div>
+        <div id="fourth">
+            <div id="fourFirstContainer">
+                <img id="image" src="https://www.1mg.com/images/How_it_Works_1.svg" alt="">
+            </div>
+            <div id="FourLastContainer">
+                <div id="containh1">
+                    <h1 id="h1">01</h1>
+                </div>
+                <div id="">
+                    <h3 id="h3">Start a session</h3>
+                    <p id="p">
+                        Select the type of category you would like to consult with the doctor.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class = "dropdown">
-            <button class="dropbtn">Personal Care</button>
-            <div class="dropdown-content">
-              <a href="#">Sexual Wellness</a>
-              <a href="#">Skin Care</a>
-              <a href="#">Hair Care</a>
-              <a href="#">Women Care</a>
-              <a href="#">Baby Care</a>
-              
+        <div id="fourth">
+            <div id="FourLastContainer">
+                <div id="containh1">
+                    <h1 id="h1">02</h1>
+                </div>
+                <div id="">
+                    <h3 id="h3">
+                        Tell us what’s troubling you</h3>
+                    <p id="p">
+                        Type in your concern and attach prescription, lab reports if any. Help doctor understand your case better.
+                    </p>
+                </div>
+            </div>
+            <div id="fourFirstContainer">
+                <img id="image" src="https://www.1mg.com/images/How_it_Works_2.svg" alt="">
             </div>
         </div>
-        <div class = "dropdown">
-            <button class="dropbtn">Health Conditions</button>
-            <div class="dropdown-content">
-              <a href="#">Stomach Conditions</a>
-              <a href="#">Heart Care</a>
-              <a href="#">Pain Relief</a>
+        <div id="fourth">
+            <div id="fourFirstContainer">
+                <img id="image" src="https://www.1mg.com/images/How_it_works_3.svg" alt="">
+            </div>
+            <div id="FourLastContainer">
+                <div id="containh1">
+                    <h1 id="h1">03</h1>
+                </div>
+                <div id="">
+                    <h3 id="h3">
+                        Connect with the doctor</h3>
+                    <p id="p">
+                        A doctor is auto-assigned to you that best matches your concern. You will get a diagnosis and treatment for your condition.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class = "dropdown">
-            <button class="dropbtn">Ayurveda Products</button>
-            <div class="dropdown-content">
-              <a href="#">Ayurveda Top Brands</a>
-              <a href="#">Top Health Concerns</a>
-              <a href="#">Unani Medicines</a>
+        <div id="fourth">
+            <div id="FourLastContainer">
+                <div id="containh1">
+                    <h1 id="h1">04</h1>
+                </div>
+                <div id="">
+                    <h3 id="h3">    
+                        Follow up with your doctor</h3>
+                    <p id="p">
+                        Still, need more clarity? You can follow up with the doctor even after your chat window closes
+                    </p>
+                </div>
+            </div>
+            <div id="fourFirstContainer">
+                <img id="image" src="https://www.1mg.com/images/How_it_Works_4.svg" alt="">
             </div>
         </div>
-        <div class = "dropdown">
-            <button class="dropbtn">Homeopathy</button>
-            <div class="dropdown-content" >
-              <a href="#">Homeopathy Top Brands</a>
-              <a href="#">Homeopathy Wellness Combos</a>
-              <a href="#">Homeopathy Medicines</a>
+         <div id="fifth">
+            <div>
+                <h1>30L+</h1>
+                <h3>Total Consultaion</h3>
+            </div>
+            <div>
+                <h1>30K+</h1>
+                <h3>Total Consultaion</h3>
+            </div>
+            <div>
+                <h1>22+</h1>
+                <h3>Specialities</h3>
+            </div>
+         </div>
+         <div id="cust">
+             <h4>Our Happy Customers</h4>
+         </div>
+         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-caption">
+                  <p>Amazingly easy and convenient. Great service for the same price as a clinic visit, without the hassle of having to drive to the doctor's clinic. Couldn't be any happier.</p>
+                  <h5>Rahul</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption">
+                  <p>I installed the app and went for a free consultation with a dietician. The advice given by Dr. Mirza was simply great. He shared a detailed diet chart and exercises with me which was easy to incorporate into my hectic schedule.</p>
+                  <h5>Arohi</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption">
+                  <p>Initially, I was a little skeptical of consulting a doctor online. But the consultation turned out to be honest and cool, the doctor's behavior was friendly. The best part is that I saved so much time and money!</p>
+                  <h5>Aarzoo</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption">
+                  <p>Dr. Chakraborty is so concerned about his patient. I sincerely wish him the best. He always takes the time to understand the problem and on the basis of that he takes the decision and explains it very well. And if you miss out on anything, you can come back with more questions.</p>
+                  <h5>Yash</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption">
+                   <p> Best app for consultation and the most effective way to connect with the doctor from anywhere. The doctor replies with great detail and is extremely polite. One can also come back to consult the same doctor anytime.</p>
+                  <h5>Ronak</h5>
+                </div>
+              </div>
+             
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+         <div id="seven">
+            <div>
+                <img src="https://www.1mg.com/images/confidential.svg" alt="">
+                <h3>100% Confidential</h3>
+                <p>All advice & consultations are completely confidential. You can also delete chats whenever you want.</p>
+            </div>
+            <div>
+                <img src="https://www.1mg.com/images/certified.svg" alt="">
+                <h3>Certified Doctors</h3>
+                <p>We offer quality healthcare through our network of certified and experienced doctors.</p>
+            </div>
+            <div>
+                <img src="https://www.1mg.com/images/convenience.svg" alt="">
+                <h3>Convience</h3>
+                <p>Forget the hassle of long queues and rush hour. Seek expert opinion anytime, anywhere.</p>
+            </div>
+            <div>
+                <img src="https://www.1mg.com/images/costEffective.svg" alt="">
+                <h3>Cost Effective</h3>
+                <p>We provide medical assistance on non urgent queries for free. Fee starting at ₹50 for faster response to queries.</p>
+            </div>
+         </div>
+         <div id="eight">
+            <h1>Frequently Asked Questions</h1>
+         </div>
+         <div id="nine">
+            <h4>When will I get an answer to my query? What happens if I don’t get a response?</h4>
+            <p>If you opt for a free consult, then we make sure the doctor replies within 24 to 48 hours. In case of a paid consult, you will receive a reply within 2-4 business hours. However, if you do not get any response within the stipulated time, we will refund your money back into your account.</p>
+            <hr>
+            <h4>Who are the consulting doctors?</h4>
+            <p>All the doctors are registered medical practitioners. Along with qualifying degrees - experience, research and track-record of practice are taken into account before a doctor is credentialed with Tata 1mg and is given access to answer patient queries.</p>
+            <hr>
+            <h4>Will the doctor be able to resolve my issue?</h4>
+            <p>Our doctors will give you expert advice on your problem and help you identify next steps which may include further tests, medicine recommendation or lifestyle tips. Few cases require face-to-face examination and we do ask patients to share pictures or reports if they can, for a conclusive diagnosis.</p>
+            <hr>
+            <h4>Is my consultation private with my doctor?</h4>
+            <p>Privacy of data is one of the fundamental human rights and we at Tata 1mg understand that. All your medical history and online consultation with us are completely private and confidential. We are compliant with industry standards to ensure your consultations are securely stored.
+            </p>
+            <hr>
+            <h4>For how long is the consultation valid?</h4>
+            <p>In the case of a paid consult, you can follow-up with your doctor for up to 3 days. In case you opt for a free consult, follow-up questions are valid for one day only.</p>
+            <hr>
+            <h4>Do you have a refund policy?</h4>
+            <p>We have a “take-it-easy” policy. If for any reason you’re not convinced with your online consultation, you can write to us at contact@1mgdoctors.com and we will review the consult with the doctor - seeking clarifications on your queries that were answered. 100% refund will be given in genuine cases.</p>
+            <hr>
+         </div>
+         <div id="ten">
+         <div>
+            <img src="https://www.1mg.com/images/oc_doctor.svg">
+         </div>
+         <div>
+                <h3>Are you a doctor?</h3>
+                <b><p>
+                    Be a part of our panel of specialists and connect with your patients from anywhere.
+                </p></b>
+                <a href="https://www.1mgdoctors.com/doctors/register/new?sessionId=72ab4eb3-69ab-42dc-894f-e0b87cfaa371" target="_blank"><button>JOIN US</button></a>
+         </div>
+         </div>
+    </div>
+
+    <div id="contactuspage">
+        <div class="navbar">
+            <div> <img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></div>
+            <div>
+                <div> <button onclick="return show('landingpage','contactuspage')">MEDICINES</button></div>
+                <div> <button onclick="return show('labtestspage','contactuspage')">LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
+                <div> <button onclick="return show('consultdocpage','contactuspage')">CONSULT DOCTORS </button></div>
+                <div> <button onclick="return show('covid19','contactuspage')">COVID-19</button></div>
+                <div> <button onclick="return show('ayurvedapage','contactuspage')">AYURVEDA</button></div>
+                <div> <button onclick="return show('careplanpage','contactuspage')">CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
+            </div>
+            <div>
+                <div class="dropdown" id="pfpdiv">
+                    <button class="dropbtn" > 
+                        <img
+                            id="pfpimg";
+                            src="https://onemg.gumlet.io/profile-rebrand_aboy0q.svg";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 150px;">
+                        <a>Profile</a>
+                        <a>My orders</a>
+                        <a>Settings</a>
+                        <a>Log Out</a>
+                    </div>
+                </div>
+                <div id="logsign">
+                    <div><button onclick="loginPopUp()">Login</button></div>
+                    <div><button onclick="SignUpPopUp()">Sign up</button></div>
+                </div>
+                <div> <button onclick="return show('offerpage','contactuspage')">Offers</button></div>
+                <div class="dropdown">
+                    <img id="cart"; class="dropbtn"; src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";> 
+                    <div class="dropdown-content"style="right: 0; min-width: 250px;" >
+                        <a>Order Summary 0</a>
+                        <a href="" style="text-align: center; color:  rgb(241, 90, 51);">PROCEED TO CART</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div >
+                <button style="color: rgb(241, 90, 51);">Need Help?</button>
+            </div>        
+        </div>
+        <div class = "search">
+            <div>
+                <img
+                    src="https://p.kindpng.com/picc/s/108-1084414_small-location-svg-png-icon-free-download-location.png";
+                >
+                <input
+                    placeholder="Enter your city"
+                    style="margin-left: 10px;"
+                >            
+            </div>        
+            <div>            
+                <input
+                    placeholder="Search for Meidicines and Health Products"
+                    style="margin-left: 10px;"
+                >  
+                <img
+                    style="margin-left: 35px;"
+                    src="https://media.istockphoto.com/vectors/black-magnifying-glass-vector-icon-on-transparent-background-vector-id1026451496?k=20&m=1026451496&s=170667a&w=0&h=1_BWTKRZavERAgSBRyQqcHBrEYh5SSDu9nS6ffM7HyU=";
+                >          
+            </div>
+            <div id="n1">
+                <h4 style="font-size: 15px;">QUICK BUY! Get 25% off on medicines*</h4>
+                <div> <button>Quick order</button></div>
             </div>
         </div>
-        <div class = "dropdown">
-            <button class="dropbtn">Featured</button>
-            <div class="dropdown-content">
-              <a href="#">Tata 1mg Health Products</a>
-              <a href="#">Monsoon Store</a>
-              <a href="#">Trending now</a>
+        <div class="contbody">
+            <div>
+                <img src="https://www.1mg.com/images/page-specific/contact-us/banner-d.png" alt="">
+                <h2>CONTACT US</h2>
+            </div>
+            <div >
+                <div class="cont2">
+                    <div>
+                        <button>Login</button>
+                        <button>Sign Up</button>
+                    </div>
+                    <div>
+                        <div>
+                            <div id="chatnow">
+                                <img
+                                    src="https://www.1mg.com/images/page-specific/contact-us/chat-icon.svg";
+                                >
+                                <h4>Chat right now</h4>
+                            </div>
+                            <p>Our chat assistant can quickly help you with any issues, queries or can 
+                                instantly redirect you to the right person for a resolution</p>
+                        </div>
+                        <div>
+                            <button>Start Chatting</button>
+                        </div>
+                    </div>
+                    <div>
+                        <button style="background-color: white; color:black; height:100%">Corporate Queries</button>
+                    </div>
+                </div>
+                <div>
+                    <div id="continfo">
+                        <h3>Corporate Details</h3>
+                        <p>
+                            <span id="bold">Mail us at:</span> care@1mg.com<br>
+                            <span id="bold">CIN</span> :U24290DL2016PTC302634<br>
+                            <span id="bold">Our location:</span><br>
+                            Registered Address<br>
+                            Level 3, Vasant Square Mall, Pocket V, Sector B,
+                            Vasant Kunj New Delhi South Delhi DL 110070.<br><br>
+                            Postal Address:<br>
+                            Corporate Address:<br>
+                            5th Floor Tower - B of The Presidency Building,
+                            46/4 Mehrauli Gurgaon Road, Sector 14,
+                            Gurugram, Haryana-122001, India
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class = "dropdown">
-            <button class="dropbtn">Covid Essentials</button>
-            <div class="dropdown-content" style="right: 0;">
-              <a href="#">Covid-19 Self test kits</a>
-              <a href="#">Oxygen Cans & Concentrators</a>
-              <a href="#">Masks</a>
-              <a href="#">Sanitizers & Handwash Products</a>
-              <a href="#">Support Your Immunity</a>
-              <a href="#">Thermometer</a>
-              <a href="#">Chyawanprash</a>
+    </div>
+
+    <div id="covid19">
+        <div class="navbar">
+            <div> <img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></div>
+            <div>
+                <div> <button onclick="return show('landingpage','covid19')">MEDICINES</button></div>
+                <div> <button onclick="return show('labtestspage','covid19')">LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
+                <div> <button onclick="return show('consultdocpage','covid19')">CONSULT DOCTORS </button></div>
+                <div> <button style="color: red;">COVID-19</button></div>
+                <div> <button onclick="return show('ayurvedapage','covid19')">AYURVEDA</button></div>
+                <div> <button onclick="return show('careplanpage','covid19')">CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
             </div>
+            <div>
+                <div class="dropdown" id="pfpdiv">
+                    <button class="dropbtn" > 
+                        <img
+                            id="pfpimg";
+                            src="data:image/jpeg;base64,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";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 150px;">
+                        <a>Profile</a>
+                        <a>My orders</a>
+                        <a>Settings</a>
+                        <a>Log Out</a>
+                    </div>
+                </div>
+                <div id="logsign">
+                    <div><button onclick="loginPopUp()">Login</button></div>
+                    <div><button onclick="SignUpPopUp()">Sign up</button></div>
+                </div>
+                <div> <button onclick="return show('offerpage','covid19')">Offers</button></div>
+                <div class="dropdown">
+                    <img id="cart"; class="dropbtn"; src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";> 
+                    <div class="dropdown-content"style="right: 0; min-width: 250px;">
+
+                        <a>Order Summary 0</a>
+                        <a href="" style="text-align: center; color:  rgb(241, 90, 51);">PROCEED TO CART</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div >
+                <button style="color: rgb(241, 90, 51);">Need Help?</button>
+            </div>
+        </div>
+        <div class = "search">
+            <div>
+                <img
+                    src="https://p.kindpng.com/picc/s/108-1084414_small-location-svg-png-icon-free-download-location.png";
+                >
+                <input
+                    placeholder="Enter your city"
+                    style="margin-left: 10px;"
+                >            
+            </div>        
+            <div>            
+                <input
+                    placeholder="Search for Meidicines and Health Products"
+                    style="margin-left: 10px;"
+                >  
+                <img
+                    style="margin-left: 35px;"
+                    src="https://media.istockphoto.com/vectors/black-magnifying-glass-vector-icon-on-transparent-background-vector-id1026451496?k=20&m=1026451496&s=170667a&w=0&h=1_BWTKRZavERAgSBRyQqcHBrEYh5SSDu9nS6ffM7HyU=";
+                >          
+            </div>
+            <div id="n1">
+                <h4 style="font-size: 15px;">QUICK BUY! Get 25% off on medicines*</h4>
+                <div> <button>Quick order</button></div>
+            </div>
+        </div>
+        <div id="error404">
         </div>
     </div> 
-    
-    <div>
-        
+    <div id="ayurvedapage">
+        <div class="navbar">
+            <div> <img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></div>
+            <div>
+                <div> <button onclick="return show('landingpage','ayurvedapage')">MEDICINES</button></div>
+                <div> <button onclick="return show('labtestspage','ayurvedapage')">LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
+                <div> <button onclick="return show('consultdocpage','ayurvedapage')">CONSULT DOCTORS </button></div>
+                <div> <button onclick="return show('covid19','ayurvedapage')">COVID-19</button></div>
+                <div> <button style="color: red;">AYURVEDA</button></div>
+                <div> <button onclick="return show('careplanpage','ayurvedapage')">CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
+            </div>
+            <div>
+                <div class="dropdown" id="pfpdiv">
+                    <button class="dropbtn" > 
+                        <img
+                            id="pfpimg";
+                            src="data:image/jpeg;base64,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";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 150px;">
+                        <a>Profile</a>
+                        <a>My orders</a>
+                        <a>Settings</a>
+                        <a>Log Out</a>
+                    </div>
+                </div>
+                <div id="logsign">
+                    <div><button onclick="loginPopUp()">Login</button></div>
+                    <div><button onclick="SignUpPopUp()">Sign up</button></div>
+                </div>
+                <div> <button onclick="return show('offerpage','ayurvedapage')">Offers</button></div>
+                <div class="dropdown">
+                    <img id="cart"; class="dropbtn"; src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";> 
+                    <div class="dropdown-content"style="right: 0; min-width: 250px;">
+
+                        <a>Order Summary 0</a>
+                        <a href="" style="text-align: center; color:  rgb(241, 90, 51);">PROCEED TO CART</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div >
+                <button style="color: rgb(241, 90, 51);">Need Help?</button>
+            </div>
+        </div>
+        <div class = "search">
+            <div>
+                <img
+                    src="https://p.kindpng.com/picc/s/108-1084414_small-location-svg-png-icon-free-download-location.png";
+                >
+                <input
+                    placeholder="Enter your city"
+                    style="margin-left: 10px;"
+                >            
+            </div>        
+            <div>            
+                <input
+                    placeholder="Search for Meidicines and Health Products"
+                    style="margin-left: 10px;"
+                >  
+                <img
+                    style="margin-left: 35px;"
+                    src="https://media.istockphoto.com/vectors/black-magnifying-glass-vector-icon-on-transparent-background-vector-id1026451496?k=20&m=1026451496&s=170667a&w=0&h=1_BWTKRZavERAgSBRyQqcHBrEYh5SSDu9nS6ffM7HyU=";
+                >          
+            </div>
+            <div id="n1">
+                <h4 style="font-size: 15px;">QUICK BUY! Get 25% off on medicines*</h4>
+                <div> <button>Quick order</button></div>
+            </div>
+        </div>
+        <div id="error404">
+        </div>
+    </div> 
+    <div id="careplanpage">
+        <div class="navbar">
+            <div> <img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></div>
+            <div>
+                <div> <button onclick="return show('landingpage','careplanpage')">MEDICINES</button></div>
+                <div> <button onclick="return show('labtestspage','careplanpage')">LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
+                <div> <button onclick="return show('consultdocpage','careplanpage')">CONSULT DOCTORS </button></div>
+                <div> <button onclick="return show('covid19','careplanpage')">COVID-19</button></div>
+                <div> <button onclick="return show('ayurvedapage','careplanpage')">AYURVEDA</button></div>
+                <div> <button style="color: red;">CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
+            </div>
+            <div>
+                <div class="dropdown" id="pfpdiv">
+                    <button class="dropbtn" > 
+                        <img
+                            id="pfpimg";
+                            src="data:image/jpeg;base64,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";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 150px;">
+                        <a>Profile</a>
+                        <a>My orders</a>
+                        <a>Settings</a>
+                        <a>Log Out</a>
+                    </div>
+                </div>
+                <div id="logsign">
+                    <div><button onclick="loginPopUp()">Login</button></div>
+                    <div><button onclick="SignUpPopUp()">Sign up</button></div>
+                </div>
+                <div> <button onclick="return show('offerpage','careplanpage')">Offers</button></div>
+                <div class="dropdown">
+                    <img id="cart"; class="dropbtn"; src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";> 
+                    <div class="dropdown-content"style="right: 0; min-width: 250px;">
+
+                        <a>Order Summary 0</a>
+                        <a href="" style="text-align: center; color:  rgb(241, 90, 51);">PROCEED TO CART</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div >
+                <button style="color: rgb(241, 90, 51);">Need Help?</button>
+            </div>
+        </div>
+        <div class = "search">
+            <div>
+                <img
+                    src="https://p.kindpng.com/picc/s/108-1084414_small-location-svg-png-icon-free-download-location.png";
+                >
+                <input
+                    placeholder="Enter your city"
+                    style="margin-left: 10px;"
+                >            
+            </div>        
+            <div>            
+                <input
+                    placeholder="Search for Meidicines and Health Products"
+                    style="margin-left: 10px;"
+                >  
+                <img
+                    style="margin-left: 35px;"
+                    src="https://media.istockphoto.com/vectors/black-magnifying-glass-vector-icon-on-transparent-background-vector-id1026451496?k=20&m=1026451496&s=170667a&w=0&h=1_BWTKRZavERAgSBRyQqcHBrEYh5SSDu9nS6ffM7HyU=";
+                >          
+            </div>
+            <div id="n1">
+                <h4 style="font-size: 15px;">QUICK BUY! Get 25% off on medicines*</h4>
+                <div> <button>Quick order</button></div>
+            </div>
+        </div>
+        <div id="error404">
+        </div>
     </div>
+    <div id="offerpage">
+        <div class="navbar">
+            <div> <img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></div>
+            <div>
+                <div> <button onclick="return show('landingpage','offerpage')">MEDICINES</button></div>
+                <div> <button onclick="return show('labtestspage','offerpage')">LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
+                <div> <button onclick="return show('consultdocpage','offerpage')">CONSULT DOCTORS </button></div>
+                <div> <button onclick="return show('covid19','offerpage')">COVID-19</button></div>
+                <div> <button onclick="return show('ayurvedapage','offerpage')">AYURVEDA</button></div>
+                <div> <button onclick="return show('careplanpage','offerpage')">CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
+            </div>
+            <div>
+                <div class="dropdown" id="pfpdiv">
+                    <button class="dropbtn" > 
+                        <img
+                            id="pfpimg";
+                            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBhUIBxITFRUVGRgbGBYYGBcUFRsYFRUXFh0VFh8YHighGBolHRcYITEhJTUrLi4uGB81OjUtNygtLisBCgoKDQ0NEA0NGisZExkrLSsrKysrKysrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAMgAyAMBIgACEQEDEQH/xAAcAAEAAwADAQEAAAAAAAAAAAAABgcIAwQFAgH/xABCEAACAQIDBAUJAgwHAAAAAAAAAQIDBAUGEQchUYESMUFhkRMUIjJScXKhwUKxFyMkMzRDU4KSorLCCBUWYmOT0f/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8AvEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8yaitWVDnza0repLDsrtSktVK4fpQT7VSX2vie7hr1gWfi2M4bg9Hy2J1qdKPGclHX3LrfIheIbYss20nG18vW74w6MfGo19xQt9eXOIXLub2pOpN9cptyl4s4AsXb+G/Dtf0Svp8dPXwPUw7bFlm6ko3Sr0e+UOlHxpt/cZ+AI1rhOM4bjFDy+F1qdWP+ySlp711rmeiZAsby5w+6VzZVJ05rqlBuMvFFwZD2sq4qRw/NLjGT0UbhLowb7FVXVD4lu46dYIt8HzFqS1R9BAAAAAAAAAAAAAAAAAAAACO59x5ZbyvVxBevp0aa41J7o+HXyArjbHnqcq0st4TLRLdXmutv8AYp8Pa8OJUR+1JzqVHUqNttttve23vbfefgaAAAAAAAAW7scz1ONaOW8WlqnuoTfWn+xb4ez4cC6THVOc6c1Om2mmmmtzTT1TXejUeQseWZMr0sQl6+nRqLhUhul49fMJqRAAIAAAAAAAAAAAAAAAAFM/4gMRbna4XF7vTqy73+bj/eXMZ+27VHPOcYvsoQXjOowYroABoAAAAAAAALg/w/4i1UucLk93oVY9z/Ny/tKfLF2E1HDOcortoTXhOmwmtAgAIAAAAAAAAAAAAAAAAFEbfbSVPMVC703TouPOnUf0qIvcrvbZgssTyl57RWsraXT7+g90/Dc/3QM+gANAAAAAAAABZ+wK0lUzFXu9N0KKjzqVF9KbKwNBbE8FeG5T89qrSVzLp9/QS6MPq+YTViAAIAAAAAAAAAAAAAAAAHFXowuKTpVUnGSaae9NNaNM5QBl3PuVq2VMelatN0payoy4w9lv249T5PtI2aqzZluwzRhTsb9d8Jr14T7JR+q7UZwzXlXE8r33kMRj6Lb6FVJ9Ca7n2PjF718wuPEAAUAAAA9zKmVcTzRfeQw+Pop+nVafQgu99r4RW9/MDsZBytWzXj0bVJqlHSVaXCGvqp+3LqXN9hpyhRp0KKo0klGKSiluSSWiS5Hk5Ty3YZXwpWNgu+c36859spfRdiPcDIAAAAAAAAAAAAAAAAAABw3FxStqLrXElGMU25SajFJdrb6jr4riVrhVjO9v5qFOC1lJvdp9W+pLtM75+z5fZruXRp607aL1jT7ZadU6vF93UvfvAse+2yYPQxlWttTnUo6tTrLdzpxe+a8O7Um9OeD5owjpR8lcUKi7dJxfvXY1yaMonoYJjuKYDdec4RWlTfalvjLulF7p8wsWzmPYvb1putl2t5PX9XV1lDlNekuepA8R2a5tsXo7V1FxpyjNPlrr8iY4FtrqRSp4/b68Z0Xp4wm/uZMrHallC7hrK48m+FSE4vx0a+YFE/6PzN0uj5jdf9Uv/D08O2a5tvpaRtXTXGrKNNLlq38i8/8AXuU9NfPrf+M8++2pZQtIaxuHUfCnCc346JfMFRjLexe3pTVbMVbyn/HS1jDnN+k+WhYtSpg+VsI6U/JW9CmurdCPJdrfNsq/HdtdSUXTwG304TrPXwhD6srLG8dxTHrrznF60qj7E90Y90YrdDkBc1htkwevjMrW5pzp0dyhWe/nUgt8F3rXv0LIt7ilc0VWt5KUZJNSTUotPqaa6zIBL8hZ8vsp3Ko1NaltJ+lS7Y8Z0uD7up+/eCNLg6OFYja4tYQvrCcZ05rWMk92n0fY12HeCAAAAAAAAAAAAAAfE5KMelLsPsrbbTmeWEYGsJtJaVLnVNrrjSXrP971fECu9qOdZ5lxTzSyl+TUW+jpuVSS3Oq+72e7f2kGADQAAAAAasAAAAAAAE42XZ0llrFfNL2X5NWa6Wu9U5Pcqq7uyXdv7DRcJKUelEx4X7sWzPLFsDeFXcm6ltolq9XKk/V/h9XwCaskABAAAAAAAAAAAGZd2i408ezfXuovWEZeTp8OhT3ar3vV8zRWbMQ/yrLVxfrc6dKbXxdHSPzaMo7+0LgAAoAAAAAAAAAAAAAEk2d408BzdQupPSEpKnU4dCpubfuej5EbG/sA2MgePlK//wA1yzb373upSg38XRSl80z2AyAAAAAAAAAACE7Yq7o5ArpfadOPJ1Ya/cZvNI7XbKre5DrqjvcOhU04xpzTl8tXyM3BcAAFAAAAAAAAAAAAAAAAaQ2OV3WyBQT+y6keSqz0+8mxCtkNlVssh0FW3OfTqJcI1JuUflo+ZNQyAAAAAAAAAADiq04Vqbp1EnFppp7009zTM7bRsgXWWbqV5Yxc7WT3S63T1/V1O7hLq47+vRxx1IQqwcKiTT601qtODQGPQX5mjZFg+Jydxg8vNpvX0UulRb+HrjyencVljezXNOESbdDy0Pao/jFp8O6S8AtRAH1WpVLep5OvFxfCScZLkz5CgAAAAAAAAPqjSncVPJ0IucuEU5SfJEtwTZrmnF2pKh5GHtVvxe74d8n4ARAnGznIF1ma6jeX0XC1i98up1NP1dPu4y6uG/qsTK+yHCMMkrjGJeczX2WujRT+HrnzencWNTpwpQUKaSS6klotOCQSvylThRpqnTSUUkkluSS3JI5QAgAAAAAAAAAAAAAAADqXmHWV/DoX9KnUXCcIzXzRHL3ZvlC8blO0hF8ablT/AKGkS4AVzcbGssVd9KVzD3VFJfzxZ0J7EsJl6l1cLlTf0LVAFTfgQw/X9MrfwUzkhsSwmPr3Vw+VNfQtUAVzb7G8sU99WVzP31FFfyRR7Fls3yhZvpQtISfGo5VP620S4AdSzw6ysIdCwpU6a4QhGC+SO2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/Z";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 150px;">
+                        <a>Profile</a>
+                        <a>My orders</a>
+                        <a>Settings</a>
+                        <a>Log Out</a>
+                    </div>
+                </div>
+                <div id="logsign">
+                    <div><button onclick="loginPopUp()">Login</button></div>
+                    <div><button onclick="SignUpPopUp()">Sign up</button></div>
+                </div>
+                <div> <button style="color: red;">Offers</button></div>
+                <div class="dropdown">
+                    <button class="dropbtn" > 
+                        <img
+                            id="cart";
+                            src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";
+                        >
+                    </button>                    
+                    <div class="dropdown-content"style="right: 0; min-width: 250px;">
+                        <a>Order Summary 0</a>
+                        <a href="" style="text-align: center; color:  rgb(241, 90, 51);">PROCEED TO CART</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div >
+                <button style="color: rgb(241, 90, 51);">Need Help?</button>
+            </div>
+        </div>
+        <div class = "search">
+            <div>
+                <img
+                    src="https://p.kindpng.com/picc/s/108-1084414_small-location-svg-png-icon-free-download-location.png";
+                >
+                <input
+                    placeholder="Enter your city"
+                    style="margin-left: 10px;"
+                >            
+            </div>        
+            <div>            
+                <input
+                    placeholder="Search for Meidicines and Health Products"
+                    style="margin-left: 10px;"
+                >  
+                <img
+                    style="margin-left: 35px;"
+                    src="https://media.istockphoto.com/vectors/black-magnifying-glass-vector-icon-on-transparent-background-vector-id1026451496?k=20&m=1026451496&s=170667a&w=0&h=1_BWTKRZavERAgSBRyQqcHBrEYh5SSDu9nS6ffM7HyU=";
+                >          
+            </div>
+            <div id="n1">
+                <h4 style="font-size: 15px;">QUICK BUY! Get 25% off on medicines*</h4>
+                <div> <button>Quick order</button></div>
+            </div>
+        </div>
+    
+        <div class = "drop">
+            <div class = "dropdown">
+                <button class="dropbtn">Health Resource Center<i class="arrow right"></i></button>
+                <div class="dropdown-content" >
+                  <a href="#">All Diseases</a>
+                  <a href="#">All Medicines</a>
+                  <a href="#">Medicines by Therapeutic Class</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Vitamins & Nutrition<i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Vitamins & Supplements</a>
+                  <a href="#">Nutritional Drinks</a>
+                  <a href="#">Health Food & Drinks</a>
+                </div>
+            </div><div class = "dropdown">
+                <button class="dropbtn">Diabetes<i class="arrow right"></i></button>
+                <div class="dropdown-content" >
+                  <a href="#">Devices</a>
+                  <a href="#">Diabetic Medicines</a>
+                  <a href="#">Sugar Substitutes</a>
+                </div>
+            </div><div class = "dropdown">
+                <button class="dropbtn">Healthcare Devices<i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Top brands in Healthcare Devices</a>
+                  <a href="#">Masks (N95, Surgical and more)</a>
+                  <a href="#">Oxygen Concentrators & Cans</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Personal Care<i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Sexual Wellness</a>
+                  <a href="#">Skin Care</a>
+                  <a href="#">Hair Care</a>
+                  <a href="#">Women Care</a>
+                  <a href="#">Baby Care</a>
+                  
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Health Conditions<i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Stomach Conditions</a>
+                  <a href="#">Heart Care</a>
+                  <a href="#">Pain Relief</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Ayurveda Products <i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Ayurveda Top Brands</a>
+                  <a href="#">Top Health Concerns</a>
+                  <a href="#">Unani Medicines</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Homeopathy <i class="arrow right"></i></button>
+                <div class="dropdown-content" >
+                  <a href="#">Homeopathy Top Brands</a>
+                  <a href="#">Homeopathy Wellness Combos</a>
+                  <a href="#">Homeopathy Medicines</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Featured <i class="arrow right"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Tata 1mg Health Products</a>
+                  <a href="#">Monsoon Store</a>
+                  <a href="#">Trending now</a>
+                </div>
+            </div>
+            <div class = "dropdown">
+                <button class="dropbtn">Covid Essentials <i class="arrow right"></i></button>
+                <div class="dropdown-content" style="right: 0;">
+                  <a href="#">Covid-19 Self test kits</a>
+                  <a href="#">Oxygen Cans & Concentrators</a>
+                  <a href="#">Masks</a>
+                  <a href="#">Sanitizers & Handwash Products</a>
+                  <a href="#">Support Your Immunity</a>
+                  <a href="#">Thermometer</a>
+                  <a href="#">Chyawanprash</a>
+                </div>
+            </div>
+        </div> 
+        
+        <div id="offermainbody">
+            <div>
+            </div>
+            <div>
+                <div id="medicineoffers">
+                    <div><h2>Medicine Offers</h2></div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1600231760/marketing/irclouvzucubfjs5bvd7.png";>                            
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Payday Sale is now LIVE</h4>
+                                    <p>Expiry: 05 Aug 22</p></div>
+                                <div id="defcol">
+                                    <a> Offer Details</a>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1650882911/oavmwhoy4vmy7nt5hi6z.jpg";>                            
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Pay with Mobikwik and get up to ₹500 cashback with assured cashback of ₹100</h4>
+                                    <p>Expiry: 05 Aug 22</p></div>
+                                <div id="defcol">
+                                    <a> Offer Details</a>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1600950376/marketing/s2vjgrttfhqs6eakgemc.png";>
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Pay with Paytm wallet and get up to ₹500 cashback with guaranteed ₹50 cashback</h4>
+                                    <p>Expiry: 05 Aug 22</p></div>
+                                <div id="defcol">
+                                    <a> Offer Details</a>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1649249741/jdqaawvmx2dvsiao2r7t.png";>
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>3-hour express delivery is now live in Delhi for medicines</h4>
+                                    <p>Expiry: 31 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="labtestdiv">
+                    <div><h2>Lab Test Offers</h2></div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://onemg.gumlet.io/image/upload/yjlox4ttff7c3lz2dpb5.png";>                            
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Most popular Tata 1mg Labs Test Combos @199 only</h4>
+                                    <p>Expiry: 31 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1648838060/uwujyqp77xeq1y6acvyj.png";>                            
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Pay with Airtel Payments Bank and get flat ₹150 cashback on a minimum transaction of ₹1000</h4>
+                                    <p>Expiry: 05 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1600950376/marketing/s2vjgrttfhqs6eakgemc.png";>
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Pay with Paytm wallet and get up to ₹500 cashback with guaranteed ₹50 cashback</h4>
+                                    <p>Expiry: 05 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1649249741/jdqaawvmx2dvsiao2r7t.png";>
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>3-hour express delivery is now live in Delhi for medicines</h4>
+                                    <p>Expiry: 31 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="careplandiv">
+                    <div><h2>Care Plan Offers</h2></div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://onemg.gumlet.io/image/upload/rkrshiisab0t3cz49bsf.png";>                            
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Care Plan exclusive- Flat 27% off + 7% NeuCoins on your first allopathy medicine order</h4>
+                                    <p>Expiry: 31 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://onemg.gumlet.io/image/upload/yextszpjmmfdtkdu1j2l.png";>                            
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Care Plan exclusive- Flat 27% off + 7% NeuCoins on your first allopathy medicine order</h4>
+                                    <p>Expiry: 05 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1600950376/marketing/s2vjgrttfhqs6eakgemc.png";>
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Pay with Paytm wallet and get up to ₹500 cashback with guaranteed ₹50 cashback</h4>
+                                    <p>Expiry: 05 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://onemg.gumlet.io/image/upload/v1625564823/l2ocwxfj5onkevoprtrc.png";>
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Save an extra 7% over and above existing discounts with Care Plan</h4>
+                                    <p>Expiry: 31 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="otheroffersdiv">
+                    <div><h2>Other Offers</h2></div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://onemg.gumlet.io/image/upload/rkrshiisab0t3cz49bsf.png";>                            
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Care Plan exclusive- Flat 27% off + 7% NeuCoins on your first allopathy medicine order</h4>
+                                    <p>Expiry: 31 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://onemg.gumlet.io/image/upload/yextszpjmmfdtkdu1j2l.png";>                            
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Care Plan exclusive- Flat 27% off + 7% NeuCoins on your first allopathy medicine order</h4>
+                                    <p>Expiry: 05 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1600950376/marketing/s2vjgrttfhqs6eakgemc.png";>
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Pay with Paytm wallet and get up to ₹500 cashback with guaranteed ₹50 cashback</h4>
+                                    <p>Expiry: 05 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="offerdiv">
+                        <div>
+                            <img src="https://onemg.gumlet.io/image/upload/v1625564823/l2ocwxfj5onkevoprtrc.png";>
+                        </div>
+                        <div id="offerdiv2">
+                            <div>
+                                <div>
+                                    <h4>Save an extra 7% over and above existing discounts with Care Plan</h4>
+                                    <p>Expiry: 31 Aug 22</p></div>
+                                <div>
+                                    <p id="defcol">Offer Details</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="offerbuttons">
+                <div> <a href="#medicineoffers">Medicine Offers</a></div>
+                <div> <a href="#labtestdiv">Lab Test Offers</a></div>
+                <div> <a href="#careplandiv">Care Plan Offers</a></div>
+                <div> <a href="#otheroffersdiv">Other Offers</a></div>
+            </div>
+        </div>   
+    </div>
+    <div id="parentLogin">
+        <div id="childlogin">
+         <div id="containerlogin">         
+             <div id="loginimg">
+            <img src="http://drive.google.com/uc?export=view&id=1DQvQJTArdO5MmEr5_IAr8pQILu9YzhPv" alt="logoImg">
+             <div>
+                 <h4 id="queries">Health Related Queries</h4>
+                 <p id="loginImgtext">consult our certified doctors from anywhere,anytime
+                  and for free. We guarantee your Privacy.
+                 </p>
+                </div>
+             </div>
+             
+             <div id="loginform">
+                 <div id="closepopUp">
+                     <button  onclick="closePopUp()" ><i class="fa-solid fa-xmark"></i></button>
+                 </div>
+                 <div id="loginLogo">
+                     <h2>LOGIN</h2>
+                     <p id="loginText" style="color:#787777 ;font-size:15px;" >Get access to your orders, lab tests & doctor consultations</p>
+                 </div>
+                 <form action="" id="LoginId">
+                    <input type="text" id="form-email" class="form-textbox" required>
+                    <label for="form-email" class="form-label">Enter Your Email ID or Mobile Number</label>
+                    <input type="password" id="LoginPassword" class="LoginPass-textbox"  required>
+                    <label for="form-email" class="LoginPassform-label">Enter Your Password</label>
+                     <input type="submit" value="LOGIN">
+                 </form>
+                 <div id="LoginLinks">
+                     <div>
+                   <p>New on 1mg?<button class="btndeco" onclick="changeToSignUp()" >Sign Up</button></p>
+                   <p>Have a Corporate account?<a style="color:#e56060" href="">Click Here</a></p>
+                   <p >By logging in,you agree to our <span style="text-decoration:underline;">Terms and Condition</span> &
+                     <span style="text-decoration:underline;">Privacy Policy</span></p>
+                     <span><a style="color:#e56060" href="">Need Help? Get In Touch</a></span>
+                 </div>
+             </div>
+             </div> 
+         </div>
+        </div>
+    </div>
+    <div id="parentSignUp">
+        <div id="childSignUp">
+         <div id="SignUpcontainer">
+           
+            
+             <div id="loginimg">
+            <img src="http://drive.google.com/uc?export=view&id=1DQvQJTArdO5MmEr5_IAr8pQILu9YzhPv" alt="logoImg">
+             <div>
+                 <h4 id="queries">Health Related Queries</h4>
+                 <p id="SignUpImgtext">consult our certified doctors from anywhere,anytime
+                  and for free. We guarantee your Privacy.
+                 </p>
+                </div>
+             </div>
+             
+             <div id="SignUpform">
+                 <div id="closepopUp">
+                     <button  onclick="SignUpclosePopUp()" ><i class="fa-solid fa-xmark"></i></button>
+                 </div>
+                 <div id="SignUpLogo">
+                     <h2>Sign Up</h2>
+                     <p id="SignUpText" style="color:#787777 ;font-size:15px;" >Please enter your Mobile number And Password</p>
+                 </div>
+                 <form action="" id="SignUpId">
+                    <input type="text" id="SignUpform-email" class="SignUpform-textbox" required>
+                    <label for="form-email" class="form-label">Enter Your Mobile Number</label>
+                    <input type="password" id="SignUpPassword" class="SignUpPass-textbox"  required>
+                    <label for="form-email" class="Passwordform-label">Enter Your Password</label>
+                     <input type="submit" value="CONTINUE">
+                 </form>
+                 <div id="SignUpLinks">
+                     <div>
+                   <p>Have an Account?<button class="btndeco" onclick="changeToLogin()">Login</button></p>
+                   <p>Have a Corporate account?<a style="color:#e56060" href="">Click Here</a></p>
+                   <p >By logging in,you agree to our <span style="text-decoration:underline;">Terms and Condition</span> &
+                     <span style="text-decoration:underline;">Privacy Policy</span></p>
+                     <span><a style="color:#e56060" href="">Need Help? Get In Touch</a></span>
+                 </div>
+             </div>
+             </div> 
+         </div>
+        </div>
+    </div>
+    <div id="footermain">
+        <div id="firstContainer">
+            <h2>INDIA’S LARGEST HEALTHCARE PLATFORM</h3>
+            <div id="firstContainerDetails">
+                <div>
+                    <h1>260m+</h1>
+                    <p>visitors</p>
+                </div>
+                <div>
+                    <b><h1>31m+</h1></b>
+                    <p>Orders delivered</p>
+                </div>
+                <div>
+                    <b><h1>1800m+</h1></b>
+                    <p>Cities</p>
+                </div>
+            </div>
+       <hr>
+        <div id="secondContainer">
+            <div>
+                <h4>Get the link to download App</h4>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter Phone Number">
+                <button id="sendlink">send link</button>
+            </div>
+        </div>
+         </div>
+        <div id="thirdContainer">
+            <div>
+              <h4>Know Us</h4>
+             <p>About Us<p>
+              <p>Contact Us</p>
+               <p>Press Coverage</p>
+               <p>Careers</p>
+               <p>Business Partnership</p> 
+               <p>Become a Health Partner</p> 
+               <p>Corporate Governance</p> 
+            </div>
+            <div>
+                <h4>Our Policies</h4>
+                <p>Privacy Policy<p>
+                 <p>Terms and Conditions</p>
+                 <p>Editorial Policy</p>
+                 <p>Return Policy</p>
+                 <p>Business Partnership</p> 
+                 <p>IP Policy</p> 
+                 <p>Grievance Redressal Policy</p> 
+            </div>
+            <div>
+                <h4>Our services</h4>
+                    <p>Order Medicines</p>
+                    <p>Book Lab Tests</p>
+                    <p>Consult a Doctor</p> 
+                    <p>Ayurveda Articles</p> 
+                    <p>Hindi Articles</p>
+                    <p>Care Plan</p> 
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <p>social links<p>
+                <div><a href="https://www.youtube.com/c/1mgofficial"><i class="fa-brands fa-square-youtube"></i></a> </i> <a href="https://www.facebook.com/1mgOfficial"> <i class="fa-brands fa-square-facebook"></i> </a> <i class="fa-brands fa-square-twitter"></i> 
+                <i class="fa-brands fa-linkedin"></i></div>
+                <p>Want daily dose of health ?</p>
+                <button id="sIgn"><b>SIGN UP</b> </button>
+            </div>
+            <div>
+             <b></b><h4>Download App</h4>
+           <a href="https://play.google.com/store/apps/details?id=com.aranoah.healthkart.plus"> <img class="logO" src="https://mediaserver.goepson.com/ImConvServlet/imconv/a86a6a0d739ae80d874bc8a41608962eccd24896/original" alt=""><br></a> 
+            <a href="https://itunes.apple.com/in/app/1mg/id554578419?mt=8"><img class="logO" src="https://www.missionviejochamber.com/uploads/1/1/5/3/115365123/apple-app-store_orig.jpg" alt=""></a> 
+            </div>
+        </div>
+        <div id="fourthcontainer">
+            <div>
+                <div class="fourthcontainerImage"><img  src="https://www.championx.com/assets/images/content/ESP_Gas_Handlers_ESP_Gas_Handler_Icon3.png" alt="">    </div>
+                <div>
+                    <h2>Reliable</h2>
+                    <p>
+                        All products displayed on Tata 1mg are procured from verified and licensed pharmacies. All labs listed on the platform are accredited
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="fourthcontainerImage"><img  src="https://cdn-icons-png.flaticon.com/512/1803/1803612.png" alt="">    </div>
+                <div>
+                    <h2>Secure</h2>
+                    <p>
+                        Tata 1mg uses Secure Sockets Layer (SSL) 128-bit encryption and is Payment Card Industry Data Security Standard (PCI DSS) compliant
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="fourthcontainerImage"><img  src="https://cdn-icons-png.flaticon.com/512/3588/3588395.png" alt=""></div>    
+                <div>
+                    <h2>Affordable</h2>
+                    <p>
+                        Find affordable medicine substitutes, save up to 50% on health products, up to 80% off on lab tests and free doctor consultations.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="fifthcontainer">
+                <div><img class="lastImg1" src="https://static.legitscript.com/seals/729605.png" alt=""></div>
+                <div><img class="lastImg1" src="https://onemg.gumlet.io/URS_ebgmxc.png" alt=""></div>
+        </div>
+       <h3 id="h3">India's only LegitScript and ISO/ IEC 27001 certified online healthcare platform</h3>
+       <div>
+        <div id="sixthcontainer">
+            <div id="sixthcontainerfirstdiv"><h4>© 2022 Tata 1mg. All rights reserved. In compliance with Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945, we don't process requests for Schedule X and other habit forming drugs.
+            </h4></div>
+        </div>
+       </div>
+    </div>
+    <div id="doctorspage">
+        <div id="first">
+            <div>
+                <h1>
+                Consult with Doctors across 22+ Specialities,<br>
+                over <span>Chat, Video & Voice calls.</span> </h1>
+                <h2>Skip the struggle of booking appointments. <br>
+                    Consult a doctor at your ease</h2>
+                
+                <label for="enter" class="labelEdit">input query</label>
+                <input type="text" id="enter" placeholder="">
+                <button>CONSULT NOW</button>
+                <img src="https://onemg.gumlet.io/image/upload/v1625554511/mqz0j8blegoylexsvtsl.png" alt="">
+            </div>
+            <div id="vid">
+                <video  autoplay loop muted >
+                    <source src="https://onemg.gumlet.io/eConsult-final_ro63yx.webm" type="video/webm">
+                  </video>
+            </div>
+        </div> 
+        <div id="second">
+            <div id="between">
+                <h3>Chat with our specialist doctors</h3>
+            </div>
+            <div id="second2">
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/liinlnkozof8mdtelot2.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/fcqsjqyummdc0wv8eepm.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/zsreblulpofk1bqqi0vp.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/y7x2wylau943va6dcxyr.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/tesj5p15sruirjuy9jix.png" alt="">
+                    <p>General Physician</p>
+                </div>
+                <div>
+                    <img src="https://onemg.gumlet.io/marketing/Kaya-Clinic-Logo.png" alt="">
+                    <p>General Physician</p>
+                </div>
+            </div>     
+        </div>
+        <div id="third">
+            <h1>How Online Doctor Consultaion Works</h1>
+        </div>
+        <div id="fourth">
+            <div id="fourFirstContainer">
+                <img id="image" src="https://www.1mg.com/images/How_it_Works_1.svg" alt="">
+            </div>
+            <div id="FourLastContainer">
+                <div id="containh1">
+                    <h1 id="h1">01</h1>
+                </div>
+                <div id="">
+                    <h3 id="h3">Start a session</h3>
+                    <p id="p">
+                        Select the type of category you would like to consult with the doctor.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="fourth">
+            <div id="FourLastContainer">
+                <div id="containh1">
+                    <h1 id="h1">02</h1>
+                </div>
+                <div id="">
+                    <h3 id="h3">
+                        Tell us what’s troubling you</h3>
+                    <p id="p">
+                        Type in your concern and attach prescription, lab reports if any. Help doctor understand your case better.
+                    </p>
+                </div>
+            </div>
+            <div id="fourFirstContainer">
+                <img id="image" src="https://www.1mg.com/images/How_it_Works_2.svg" alt="">
+            </div>
+        </div>
+        <div id="fourth">
+            <div id="fourFirstContainer">
+                <img id="image" src="https://www.1mg.com/images/How_it_works_3.svg" alt="">
+            </div>
+            <div id="FourLastContainer">
+                <div id="containh1">
+                    <h1 id="h1">03</h1>
+                </div>
+                <div id="">
+                    <h3 id="h3">
+                        Connect with the doctor</h3>
+                    <p id="p">
+                        A doctor is auto-assigned to you that best matches your concern. You will get a diagnosis and treatment for your condition.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="fourth">
+            <div id="FourLastContainer">
+                <div id="containh1">
+                    <h1 id="h1">04</h1>
+                </div>
+                <div id="">
+                    <h3 id="h3">    
+                        Follow up with your doctor</h3>
+                    <p id="p">
+                        Still, need more clarity? You can follow up with the doctor even after your chat window closes
+                    </p>
+                </div>
+            </div>
+            <div id="fourFirstContainer">
+                <img id="image" src="https://www.1mg.com/images/How_it_Works_4.svg" alt="">
+            </div>
+        </div>
+         <div id="fifth">
+            <div>
+                <h1>30L+</h1>
+                <h3>Total Consultaion</h3>
+            </div>
+            <div>
+                <h1>30K+</h1>
+                <h3>Total Consultaion</h3>
+            </div>
+            <div>
+                <h1>22+</h1>
+                <h3>Specialities</h3>
+            </div>
+         </div>
+         <div id="cust">
+             <h4>Our Happy Customers</h4>
+         </div>
+         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-caption">
+                  <p>Amazingly easy and convenient. Great service for the same price as a clinic visit, without the hassle of having to drive to the doctor's clinic. Couldn't be any happier.</p>
+                  <h5>Rahul</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption">
+                  <p>I installed the app and went for a free consultation with a dietician. The advice given by Dr. Mirza was simply great. He shared a detailed diet chart and exercises with me which was easy to incorporate into my hectic schedule.</p>
+                  <h5>Arohi</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption">
+                  <p>Initially, I was a little skeptical of consulting a doctor online. But the consultation turned out to be honest and cool, the doctor's behavior was friendly. The best part is that I saved so much time and money!</p>
+                  <h5>Aarzoo</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption">
+                  <p>Dr. Chakraborty is so concerned about his patient. I sincerely wish him the best. He always takes the time to understand the problem and on the basis of that he takes the decision and explains it very well. And if you miss out on anything, you can come back with more questions.</p>
+                  <h5>Yash</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption">
+                   <p> Best app for consultation and the most effective way to connect with the doctor from anywhere. The doctor replies with great detail and is extremely polite. One can also come back to consult the same doctor anytime.</p>
+                  <h5>Ronak</h5>
+                </div>
+              </div>
+             
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+         <div id="seven">
+            <div>
+                <img src="https://www.1mg.com/images/confidential.svg" alt="">
+                <h3>100% Confidential</h3>
+                <p>All advice & consultations are completely confidential. You can also delete chats whenever you want.</p>
+            </div>
+            <div>
+                <img src="https://www.1mg.com/images/certified.svg" alt="">
+                <h3>Certified Doctors</h3>
+                <p>We offer quality healthcare through our network of certified and experienced doctors.</p>
+            </div>
+            <div>
+                <img src="https://www.1mg.com/images/convenience.svg" alt="">
+                <h3>Convience</h3>
+                <p>Forget the hassle of long queues and rush hour. Seek expert opinion anytime, anywhere.</p>
+            </div>
+            <div>
+                <img src="https://www.1mg.com/images/costEffective.svg" alt="">
+                <h3>Cost Effective</h3>
+                <p>We provide medical assistance on non urgent queries for free. Fee starting at ₹50 for faster response to queries.</p>
+            </div>
+         </div>
+         <div id="eight">
+            <h1>Frequently Asked Questions</h1>
+         </div>
+         <div id="nine">
+            <h4>When will I get an answer to my query? What happens if I don’t get a response?</h4>
+            <p>If you opt for a free consult, then we make sure the doctor replies within 24 to 48 hours. In case of a paid consult, you will receive a reply within 2-4 business hours. However, if you do not get any response within the stipulated time, we will refund your money back into your account.</p>
+            <hr>
+            <h4>Who are the consulting doctors?</h4>
+            <p>All the doctors are registered medical practitioners. Along with qualifying degrees - experience, research and track-record of practice are taken into account before a doctor is credentialed with Tata 1mg and is given access to answer patient queries.</p>
+            <hr>
+            <h4>Will the doctor be able to resolve my issue?</h4>
+            <p>Our doctors will give you expert advice on your problem and help you identify next steps which may include further tests, medicine recommendation or lifestyle tips. Few cases require face-to-face examination and we do ask patients to share pictures or reports if they can, for a conclusive diagnosis.</p>
+            <hr>
+            <h4>Is my consultation private with my doctor?</h4>
+            <p>Privacy of data is one of the fundamental human rights and we at Tata 1mg understand that. All your medical history and online consultation with us are completely private and confidential. We are compliant with industry standards to ensure your consultations are securely stored.
+            </p>
+            <hr>
+            <h4>For how long is the consultation valid?</h4>
+            <p>In the case of a paid consult, you can follow-up with your doctor for up to 3 days. In case you opt for a free consult, follow-up questions are valid for one day only.</p>
+            <hr>
+            <h4>Do you have a refund policy?</h4>
+            <p>We have a “take-it-easy” policy. If for any reason you’re not convinced with your online consultation, you can write to us at contact@1mgdoctors.com and we will review the consult with the doctor - seeking clarifications on your queries that were answered. 100% refund will be given in genuine cases.</p>
+            <hr>
+         </div>
+         <div id="ten">
+         <div>
+            <img src="https://www.1mg.com/images/oc_doctor.svg">
+         </div>
+         <div>
+                <h3>Are you a doctor?</h3>
+                <b><p>
+                    Be a part of our panel of specialists and connect with your patients from anywhere.
+                </p></b>
+                <a href="https://www.1mgdoctors.com/doctors/register/new?sessionId=72ab4eb3-69ab-42dc-894f-e0b87cfaa371" target="_blank"><button>JOIN US</button></a>
+         </div>
+         </div>
+
+    </div>
+
 </body>
 <script src="./index.js"></script>
 </html>
