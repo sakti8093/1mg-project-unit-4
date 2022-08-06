@@ -1,4 +1,5 @@
 #cart{
+    height: 200px   ;
     padding: 20px;
     width: 800px;
     display: grid;
@@ -18,20 +19,27 @@
 }
 #cart > div>div:nth-child(2) p{
     margin-top: 50px;
-    font-size: 20px;
+    font-size: 17px;
+    font-family: sans-serif;
 }
 #cart >div>div:nth-child(3) p{
     margin-top: 55px;
+    margin-left: 20px;
+    font-size: 17px;
+    font-family: sans-serif;
 }
 #cart>div>div:last-child{
     cursor: pointer;
-    border: 1px solid black;
     height: 40px;
     padding: 5px;
     margin: auto;
     margin-top: 45px; 
 }
+#cart>div>div:last-child:active{
+    transform: translateY(2px);
+}
 #cartbar{
+    margin-top: 5px;
     padding-top: 15px;
     font-weight: 600;
     margin-left: 38px;
@@ -43,13 +51,19 @@
     grid-template-columns: 20% 20% 20% 10%;
     justify-content: space-evenly;
 }
+#cartbar > div>img{
+    margin-left: 50px;
+    width: 30px;
+}
 #cartbody{
     padding: 20px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: grid;
     grid-template-columns: 60% 25%;
 }
-
+#promodiv input{
+    height: 30px;
+    width: 98%;
+}
 #promocode,#promobutton{
     display: block;
     margin: auto;
@@ -58,6 +72,7 @@
 }
 #promobutton{
     margin-top: 5px;
+    border-radius: 5px;
     height: 40px;
     background-color: rgb(255,111,97);
 }
@@ -70,7 +85,7 @@
 }
 #totalbox{
     display: grid;
-    grid-template-rows: repeat(4,25%);
+    grid-template-rows: repeat(3,30%);
 }
 #totalbox >div{
     border-bottom: 1px dashed gray;
@@ -91,4 +106,53 @@
 button{
     border: none;
     cursor: pointer;
+}
+button:active{
+    transform: translateY(2px);
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;        
+    display: grid;
+    grid-template-columns: 150px 900px 450px;
+    padding-bottom: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px, rgba(0, 0, 0, 0.1) 0px 1px 2px;
+}
+#searchproduct{   
+    height: 40px;
+    display: grid;
+    grid-template-columns:90% 5%;
+}
+#searchproduct input{
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 90%;
+    width: 99%;
+    border: none;
+    background-color: rgb(240, 240, 240);
+}
+#searchproduct img{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: -40px;
+    height: 25px;
+}
+#searchproduct >div:nth-child(2){
+    cursor: pointer;
+}
+.navbar button{
+    font-weight: bold;
+    background-color: white;   
+    border: 0px; 
+    width: 100%;
+    height: 100%;
+}
+.navbar button:hover{
+    cursor: pointer;
+    color: red;
+    transform: translateY(2px);
+
 }
