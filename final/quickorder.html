@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order with prescription | 1 mg</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="quickorder.css">
+    <script src="https://kit.fontawesome.com/baf72c5c26.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div><a href="index.html"><img src ="https://www.1mg.com/images/tata_1mg_logo.svg"></a></div>
+        <div>
+            <div> <button style="color: red;">MEDICINES</button></div>
+            <div> <button >LAB TESTS <span style="background-color:tomato; color: white; padding: 3px;">SAFE</span></button></div>
+            <div> <button onclick="return show('consultdocpage','landingpage')">CONSULT DOCTORS </button></div>
+            <div> <button onclick="return show('covid19','landingpage')">COVID-19</button></div>
+            <div> <button onclick="return show('ayurvedapage','landingpage')">AYURVEDA</button></div>
+            <div> <button onclick="return show('careplanpage','landingpage')">CARE PLAN <span style="background-color:tomato; color: white; padding: 3px;">SAVE MORE</span></button></div>
+        </div>
+        <div>
+            <div class="dropdown" id="pfpdiv">
+                <button class="dropbtn" > 
+                    <img
+                        id="pfpimg";
+                        src="data:image/jpeg;base64,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";
+                    >
+                </button>                   
+                <div class="dropdown-content"style="right: 0; min-width: 150px;">
+                    <a>Profile</a>
+                    <a>My orders</a>
+                    <a>Settings</a>
+                    <a>Log Out</a>
+                </div>
+            </div>
+            <div> <button onclick="return show('offerpage','landingpage')">Offers</button></div>
+            <div class="dropdown">
+                <button class="dropbtn"> 
+                    <a href=cartpage.html>
+                        <img
+                        id="cart";                        
+                        src="https://t1.gstatic.com/images?q=tbn:ANd9GcRYyS9CByW6caJ-cygvrq5WzrScJY_oYLgnDXXYMms3hWI5LGM9";
+                    >
+                    </a>                    
+                </button> 
+                <div id="cartbutdiv">
+                    <button id="cartbutton"></button>
+                </div>
+            </div>            
+        </div>
+        <div >
+            <button style="color: rgb(241, 90, 51);">Need Help?</button>
+        </div>
+    </div>
+    <div class = "searchbar">
+        <div id="locationinput">
+            <div>
+                <img
+                    src="data:image/png;base64,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";
+                >
+            </div>
+            <div>
+                <input placeholder="Enter your city!">
+            </div>
+            <div>
+                <img
+                    style="margin-top: 8px;"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANsAAADmCAMAAABruQABAAAAjVBMVEX29vYAAAD5+fn+/v78/PyxsbHw8PDU1NTAwMDGxsbz8/Pi4uKtra319fW8vLx1dXXOzs7Y2Ninp6fJycmOjo6enp7m5uZLS0t/f3+Hh4e1tbWVlZXr6+tSUlJlZWVDQ0NdXV04ODgiIiJFRUUMDAxubm4xMTEXFxdXV1d6enokJCRpaWktLS0SEhIjIyOVECFbAAANTUlEQVR4nO1dZ0PjOBBNJJFm0hspQBIIYYG9///zLoHlNnozKpaUYs7va8Dys8r0UaVSokSJEiVKlChBIY5x6ZdJi2XzGMtLv05KiHr1GPWfNHMlt2JC9DRuvZJbMVByKyZ+NLfh/4bbsORWDJTcignR1Lg1S27FgGho3Bolt2JAdDRunZJbMSDmGre5uvQLJYQquRUS6kbjdvNzuAkhYd7kD/C/CiWlak3qna7GrdvpZS2x/6moDPfv3s7mo9W6yuNlNZpnbSmLxm8/X5Xm6N7A6hj3o2alQPO3n7D+2IfXf/zG/ULQ289Yf/GSg9ifBbrY07v0u9sh5HLwmJvYF6a3tSvee0LWu24OFvzqXyk7pRrTKGYH3DevcGkqNc+/yzisO+q62AnZWSdhdsBj44pWppC9p2TMDrivXws7OXlPyuyA7lJemlbloAiPkzM74Pby0lz2Q+WZC9PsslMn5ML1ipuH0c2wD/6SbHgzWz27/nV8yV0ns7X15Z5mneXeklFCQSxfHYwfOenM7JM+XV5MHIDFqeP5vbNU3x+ez1PY26xq2dna5q9xmXUpxJ35nd6brWMFwxI3VbLd3JofNLvEkaKWRpm2JlqvPSYsZO12bXrYfe3s5GT9t+FlHnpUJXTGu5UcrgzP2/TPvOlkw/Am3Yw73Dxi+UL2TSpA86ybTt7yb7FlmXnGFvfsHvjH3pyRnEGq3RvNL8+46d4A5Dfx+Gzk5Iwbf9cxi1rvmLCQc1YkjM5Ejqd217Js+RxxU1X7xT1+dhZycsQMvelZx84TExZyuLvQzLF7rVuxn9P54qaqzQnzxcnJyQEz7Nw1bN7YorxhRhmcmJzs0DE/3MZI7rip7L/RgTonJaf6dMT7llspyh9/E+1XOlT9hBqKWNID+s7HyAqILQrFqOKT0+mWgjog/XY47B/n/vz6J+qseIx7f9tgVPJ47O9DTGeii8TZpOITm2LOre6Jthxjit46hhIH62z0SuXV79dRs+0M3jDH5WlUSzHJO5CS2djmRp+OMwc9hlx2ii2niG/DuiAPBqc7PvA4WFoXJzU4Hk9wVlJ9xHaMCJmxWicDe/CGHijp9RNBJNsvyxgyyxOserCxk0QU9FOvSrWGEe7Na0PWLF4iFtuJ+UMpdDY8JV6V5Dh+M2ojwmSUW7EwZpyINqpft0nJiSW+i3FhyCwspvNSN02dyPBvaym5Sdw+JsEmWDvBDyPTriOSIKWhSg6SrYlay+DN8YLRRU4+bUIhJ2E7bwz+UJV9RFCrVp9N67IFW+492cSBd7FabfLfVw6rsTCYaAqfnKzyUUKSj0FhtYY+quvVttt9X92v7eQM3jpU01eJJo5MW4sf3nyKrMa9tvyGavUbC5OD3Kh2tODPEglw3G18ZqeR2raBCr/Ymwethil4w88cZJdWH5JMHIqXR/aprPemWv0wJjKZgze8Ci5BVU9igqNCxxbmSd0B+QfrjjXLR8kmaymwAUXcGUlkXE1/JrsYqCa9x27uzPARssFJDXYz4dZIoJyogXtcUdvQF7Q60f8+vsK4qTfcaYXfL4FWCQYAO234Sff4PfRdM7JPp44fRdd54o1UiMKz08Y4pF7b/iMLQYOK3HmCrxItvyFoc8+NSTfbLF9mCBNj4DRGOYVBQkl9v7jubeWiFMRszR8KpCbflPuIuuf9OXLeILj05rUiXZ49BlQ8chqC0J2BkeWPoMeN6YDUtRcUb6FqDXPGw9q1eWw8oPQlySgDxLYK3AYkGssEE1FFijopQRl4ZYbDgyRY0ZMYuOE+pH6aRPUugPgvE38BoVN9a4eOJWrgWr+jXwkUiag4MfiS6RYg0xYhdIgBuiTPgs0dI77BvcUsSbQZo74kauWMKad0Jxpl7w0QKAP6mUCR3kSdygIM0B2zBfSTMqIoFz4k1RUUyLZGnI6nQIRTAQZ6F7MlvcfSttuOWZJrbShOmcgFoddPMO4spf1BxIbTVxx1AaG8ie5voSANgto6ICmCjThYANRgUvrqTxAaE7q9Q4UObLjgYxmWPzVvQJQmKP8FAUYVAVBwgw1UOEqoVIZTMlhsHwGOSrIoQSwFHya6z/XJ9Q2T5BBI3bVHd7DUjpvg00ts7K+udI0sSecOEKlUF9DJb0LXpL7kqH0DbpLAURDaM+m8gEgNPChBV6Q6gD6vjEYWAn0j/CZ7GNIVA33nYOCQp4DiukgTqQXTAwwdIZQuUx1mTrvGo63b+ZMW/N7S9fZEjXIgra2njbpcTvrQdsL49p+fwpTqnxOJYpmsizoAn586FbdEAXaaNhCGlNx2yULQzro4L6Tk9pEqBC2Z2EIAUnKjaksot3WS90nJLdp2u2JuXKQgjFua4txy3vywTsYtTV+GlNzeUnFTXDVOfqTk9pzCMj2g5h7LB0n1kgg/6DFoRmEYknJLlGIl4pPCPvHFLbu9YTHX/eED8rvuckrU5A68QYs5Dqs7qGbk9z9/9aW6C8UD0ur6En/X7bdECZsQYZiQUXU7oYe/f8O+imDlM/aZdqIlUrp0EbAjv4N9F5qzpvvTGH+JnnuYxshxhY7A3xs6qP4JqZ/LHXnMD5gW6qiQWjJKsGWlx0Rp/h34J5Ok/UEclrpDpJbeG6zpgf+RBh5AzKZYlOBXpgpBIr8ydKClAgyCKkzsMS/OFg+Ag5K+OrzJS7z0hhwjZ+goXGHQFwiN9KHfJjJsSmalSi93SnY2QwyKiZvqXvN1LDcI1TPZ5EL7Az6/2AuQq0PlJJzYsWJAgWo7p256XVeKiHdDUIXxikOa3i7O0BF6+QaTaAdfOyJPAfYTI0ywcUSUUokPY5JV4KyJuWwN/DI0w4p4gXvhqxLzWrnh9JM7YruRJcAIMMzl2Xh0IOAhsKCIy+fSg29RWUiwdZlFSdIngytlMOuNy8ODJRl3h5B+5HIWhU/eow9Iyxdm60KM5znuVIbQOvfexHcTlvdKMoOZGjv4jpF5ryAFaIiWFkcE9QWgKb2cptjWJU7sdS2gl3PCmeaZ5545OmucFQ+aQmyeOaYjc6cuE+nMt+cErU/n6wP0jxhfHwAuNW4dMHUdDzlEgarRFjNsXQe8SrzTELLH2EwLph7nw1iuTf65R4OJPlU/CTLjcFLYPn2YRn3ASHjVUQmmjuofbtZRbUlQR4XCmfVQsMkFb+4e0EI2/evfYOWm8GBgcQNbAM33bJzau5Mr2WOvGWB7MuJuS+LqxTl54Utp+QYRjzctY71ppcNfoMCLx5PUm5LybkOtq6lOuPtZJ3z8Joc64crwzhBn4x+Padpp6oRpfTcfjbLUd78uGlnrvwLvVmar7zbIfdTsUjVoAbeJqZuBoQz6G2/Th213u3qyp48Y9DXc9Knq8mlIzODPMjaB9Yehtevp+imQ4/fZECOVWVxOz6bPUxMteG66PhhUfJmWhGjH9C95aJuas2B/gpRNuki3OKOmH9F3ZmDsO4PyJWmDVEEMUEu/oLAbScwt9Wl0n2/EEQoyHTtjK26BDlkvmK9CEG1Uy1Jfsaawe9PUPIBqce1ubZjVLE9DWZgsc+wbVBu2lTrISZ7uY78mtr5qpPdc+m5/efvhTUae+aszGzPG7j1FS9vcfQwrc6ZlK2B607b3MSR7N/mK/HxZ2n/SUYCv5HJguyttOp44bmhiNJ3TXCcQ0MVzr/AvmzOuidzjrLF09w2l1KLDl6ahaONFj9YJQspaX9+si3pNelwnyTRzPmFbc5pu69fyAvoy+93kwJi7lsaQsWC2nF+rEv6eFTuYnvBmhSEBFJqpe6xMGu4R8nMTFeaGi+QdQzVwfeFeJs6VkpubmqzpQKe+LIfxIXs0Uc/LjWsJH9LyJSfYqxHuKo50xVzcRIXT2E5/fwCNAn/ixWAxf79tHm6yzvljz3SpBdtf2Ooiz8FNVdjGzOehZpi56qZpuWfFl5uQHVbFPhc1w57bSwPDzT/e3ISs8/rnOfbaN9jTsmq2xLy4CZkZelKe+qYOHcb+p7w15sFNmPuE+12lkA6S0VC+0GVuPXZyU6pncqMbm/eeDqzm8IXpHIM3dm5C1gbGh63dWk96CGG5bq/bFMf0LNyUrHQs96N23abQSWBtyv7cnf810oz3Lcrl3PKFzqFnGck57sncG9fZ/v0N92SKzHVP5vqSV5wKLhKvY7ea3Q4zuLcvG97OVs4avtGF1uM3ZH3tesVArM9/PiJOdZ+w+bKEc0Iu098D/WC55OKsMF6TGIrH3rXc3105sGuskzF76Vz+emsNSiVit2d2sQuSjVCy6fb/u/BqzyS6HITs570YR8ed9YqjC0PI9o0tumHD1NiO/2qg5MR6eRiPJ2dI5zpwCN7cum+M/4vVwB3SuR4cLq3oLV7d/Harcb1VIGJ/cODXn48emMs8P7FZLTpZpXi8vnEwZWRlUp/r5+dLvZ/VJGQeFhN7G1SPv409AouFAdjdESV51wfgFt3z9poA3OJqu64MITHhoqDkVkyU3IqJklsxUXIrJkpuxUTJrZgouRUTJbdiouRWTPxobtm2+xfb9JVQl4SQx/hR1EqUKHHAv60csyI6xZDXAAAAAElFTkSuQmCC";
+                >
+            </div>
+        </div>
+        <div id="searchproduct">
+            <div style="padding-left: 10px;">
+                <input placeholder="Search for Medicine and Health Products">
+            </div>
+            <div>
+                <img
+                    style="margin-top: 8px;"
+                    src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png";
+                >
+            </div>
+        </div>
+        <div id="quickorder">
+            <div><p>QUICK BUY! Get 25% off on medicines*</p></div>
+            <div>
+                <a href="quickorder.html">                    
+                    <button>Quick Order</button></div>
+                </a>
+        </div>
+    </div>
+    <div class = "drop">
+        <div class = "dropdown">
+            <button class="dropbtn">Health Resource Center<i class="arrow right"></i></button>
+            <div class="dropdown-content" >
+              <a href="multivitamin.html">All Diseases</a>
+              <a href="multivitamin.html">All Medicines</a>
+              <a href="multivitamin.html">Medicines by Therapeutic Class</a>
+            </div>
+        </div>
+        <div class = "dropdown">
+            <button class="dropbtn">Vitamins & Nutrition<i class="arrow right"></i></button>
+            <div class="dropdown-content">
+              <a href="multivitamin.html">Vitamins & Supplements</a>
+              <a href="multivitamin.html">Nutritional Drinks</a>
+              <a href="multivitamin.html">Health Food & Drinks</a>
+            </div>
+        </div><div class = "dropdown">
+            <button class="dropbtn">Diabetes<i class="arrow right"></i></button>
+            <div class="dropdown-content" >
+              <a href="devices.html">Devices</a>
+              <a href="multivitamin.html">Diabetic Medicines</a>
+              <a href="multivitamin.html">Sugar Substitutes</a>
+            </div>
+        </div><div class = "dropdown">
+            <button class="dropbtn">Healthcare Devices<i class="arrow right"></i></button>
+            <div class="dropdown-content">
+              <a href="multivitamin.html">Top brands in Healthcare Devices</a>
+              <a href="multivitamin.html">Masks (N95, Surgical and more)</a>
+              <a href="multivitamin.html">Oxygen Concentrators & Cans</a>
+            </div>
+        </div>
+        <div class = "dropdown">
+            <button class="dropbtn">Personal Care<i class="arrow right"></i></button>
+            <div class="dropdown-content">
+              <a href="multivitamin.html">Sexual Wellness</a>
+              <a href="multivitamin.html">Skin Care</a>
+              <a href="multivitamin.html">Hair Care</a>
+              <a href="multivitamin.html">Women Care</a>
+              <a href="multivitamin.html">Baby Care</a>
+              
+            </div>
+        </div>
+        <div class = "dropdown">
+            <button class="dropbtn">Health Conditions<i class="arrow right"></i></button>
+            <div class="dropdown-content">
+              <a href="multivitamin.html">Stomach Conditions</a>
+              <a href="multivitamin.html">Heart Care</a>
+              <a href="multivitamin.html">Pain Relief</a>
+            </div>
+        </div>
+        <div class = "dropdown">
+            <button class="dropbtn">Ayurveda Products <i class="arrow right"></i></button>
+            <div class="dropdown-content">
+              <a href="multivitamin.html">Ayurveda Top Brands</a>
+              <a href="multivitamin.html">Top Health Concerns</a>
+              <a href="multivitamin.html">Unani Medicines</a>
+            </div>
+        </div>
+        <div class = "dropdown">
+            <button class="dropbtn">Homeopathy <i class="arrow right"></i></button>
+            <div class="dropdown-content" >
+              <a href="multivitamin.html">Homeopathy Top Brands</a>
+              <a href="multivitamin.html">Homeopathy Wellness Combos</a>
+              <a href="multivitamin.html">Homeopathy Medicines</a>
+            </div>
+        </div>
+        <div class = "dropdown">
+            <button class="dropbtn">Featured <i class="arrow right"></i></button>
+            <div class="dropdown-content">
+              <a href="multivitamin.html">Tata 1mg Health Products</a>
+              <a href="multivitamin.html">Monsoon Store</a>
+              <a href="multivitamin.html">Trending now</a>
+            </div>
+        </div>
+        <div class = "dropdown">
+            <button class="dropbtn">Covid Essentials <i class="arrow right"></i></button>
+            <div class="dropdown-content" style="right: 0;">
+              <a href="multivitamin.html">Covid-19 Self test kits</a>
+              <a href="multivitamin.html">Oxygen Cans & Concentrators</a>
+              <a href="multivitamin.html">Masks</a>
+              <a href="multivitamin.html">Sanitizers & Handwash Products</a>
+              <a href="multivitamin.html">Support Your Immunity</a>
+              <a href="multivitamin.html">Thermometer</a>
+              <a href="multivitamin.html">Chyawanprash</a>
+            </div>
+        </div>
+    </div> 
+    <div id="fc">
+        <div>
+            <div>
+                <h4>Upoad prescription
+                </h4>
+                <P>Please attach a prescription to proceed</P>
+                <button id="btn1"><input type="file" id="file"><i class="fa-solid fa-file-arrow-up"></i><h3>UPLOAD NEW</h3></button>
+                <div><img id="appendHere" src="" alt=""></div>
+                <div id="appendDel">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="https://www.1mg.com/images/online_consultation/validate_rx.svg" alt="">
+            </div>
+            <div>
+                <li>Don’t crop out any part of the image</li>
+                <li>Avoid blurred image</li>
+                <li>Include details of doctor and patient + clinic visit date</li>
+                <li>Medicines will be dispensed as per prescription</li>
+                <li>Supported files type: jpeg , jpg , png , pdf</li>
+                <li>Maximum allowed file size: 5MB</li>
+            </div>
+        </div>
+    </div>
+    <div id="sc">
+        <div><button  id="btn2" >CONTINUE</button></div>
+        <div><a href="https://www.1mg.com/subscription-plan/subscriptions?referer=attach_rx_page&dcpFlowSource=order-with-prescription"><img src="https://onemg.gumlet.io/image/upload/v1625555741/xe6glhvttbkmqmbvrhle.png" alt=""></a></div>
+    </div>
+    <div id="tc">
+        <h5>Business Partnerships</h5>
+        <h5>About us</h5>
+        <h5>Contact us</h5>
+        <h5>Terms</h5>
+        <h5>Privacy Policy</h5>
+        <h5>Jobs</h5>
+    </div>
+    <div id="fourc">
+        <div>
+            <img src="https://static.legitscript.com/seals/729605.png" alt="">
+            <div><p>LegitScript is a verification and monitoring service for online pharmacies</p></div>
+        </div>
+        <div>
+            <img src="https://img.1mg.com/images/footer/trust-stamp-2-20mil.svg" alt="">
+            <div class="EVen"><p>Trusted by more than 20 million people</p></div>
+        </div>
+        <div>
+            <img src="https://onemg.gumlet.io/ii0pnk2hugxxv9lu3v5e.svg" alt="">
+            <div> <p>All content is authored by Tata 1mg Editorial Team</p></div> 
+        </div>
+        <div>
+            <img src="https://onemg.gumlet.io/URS_ebgmxc.png" alt="">
+           <div class="EVen"><p>We are certified
+            "ISO/IEC 27001:2013"</p></div> 
+        </div>
+    </div>
+    <div id="fivec">
+            <a href="https://www.facebook.com/1mgOfficial"><img src="https://onemg.gumlet.io/facebook-rebrand_ocvkak_1_cijmmc.svg" alt=""></a>
+            <a href="https://onemg.gumlet.io/twitter-rebrand_qiai2s_jpn2h3.svg"><img src="https://onemg.gumlet.io/twitter-rebrand_qiai2s_jpn2h3.svg" alt=""></a>
+            <a href="https://onemg.gumlet.io/linkedin-rebrand_tbeedv_zaflot.svg"><img src="https://onemg.gumlet.io/linkedin-rebrand_tbeedv_zaflot.svg" alt=""></a>
+    </div>
+    <p id="LastP">© 2022 Tata 1mg. All rights reserved.</p>
+    <img id="LastImg" src="https://www.1mg.com/images/tata_1mg_custom_footer.svg" alt="">
+</body>
+</html>
+<script>
+    document.querySelector("#file").addEventListener("change",getData);
+    
+    function getData()
+    {
+        // document.getElementById("appendDel").innerText="";
+        event.preventDefault();
+        console.log(this.files);
+        var reader=new FileReader();
+        reader.readAsDataURL(this.files[0]);
+        reader.addEventListener("load",ReadData);
+        function ReadData()
+        {
+        console.log(reader.result);
+        localStorage.setItem("image",reader.result)
+        }
+        
+        var recentImage=localStorage.getItem("image");
+        document.querySelector("#appendHere").setAttribute("src",recentImage);
+
+        document.getElementById("btn2").style.backgroundColor="rgb(255,111,97)";
+        document.getElementById("btn2").style.color="white";
+    }
+        // var btn=document.createElement("button");
+        // btn.innerText="Delete";
+        // btn.setAttribute("class","del");
+        // document.querySelector("#appendDel").append(btn);
+        // btn.style.display="none";
+</script>
