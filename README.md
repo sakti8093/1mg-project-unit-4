@@ -9,7 +9,7 @@ our task is to create a clone of TATA 1MG website with its end to end user flow 
 
 **MAKING**
 
-I am a student of a Full stack web development course offered by Masai School. During our construct week , we are assigned to create a clone of 1MG with a team of 5 members including me. After few discussion and meetings we divided work and started working. It took around 6 days to complete the clone with end to end user flow and desired functionality.
+ we are student of a Full stack web development course offered by Masai School. During our construct week , we are assigned to create a clone of 1MG with a team of 5 members including me. After few discussion and meetings we divided work and started working. It took around 6 days to complete the clone with end to end user flow and desired functionality.
 
 **MY TEAM**
 
