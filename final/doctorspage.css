@@ -98,18 +98,19 @@ div>div>h1>span
     margin: auto;
     margin-bottom: 80px;
 }
-#second2>div
-{
-    width: 90%;
-    
+#second2>div{
+    width: 90%;    
+}
+#second2 div:hover{
+    cursor: pointer;
 }
 #second2>div>img{
     width: 100%;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-#second2>div>p
-{
+#second2>div>p{
+    margin-top: 20px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: small;
@@ -261,13 +262,12 @@ color: #9e9e9e ;
     color: rgb(158,158,158);
     font-family: 'Open Sans', sans-serif;
 }
-#ten
-{
-   
+#ten{
     display: flex;
     width: 60%;
     margin: auto;
     justify-content: space-around;
+    padding-bottom: 20px;
 }
 #ten>:first-child>img
 {

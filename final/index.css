@@ -1084,8 +1084,7 @@ div>div>h1>span
 {
     background-color: rgb(232, 231, 231)
 }
-#second2
-{
+#second2{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(6,1fr);
@@ -1093,18 +1092,18 @@ div>div>h1>span
     margin: auto;
     margin-bottom: 80px;
 }
-#second2>div
-{
-    width: 90%;
-    
+#second2>div{
+    width: 90%;    
+}
+#second2 div:hover{
+    cursor: pointer;
 }
 #second2>div>img{
     width: 100%;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-#second2>div>p
-{
+#second2>div>p{
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: small;
@@ -1253,6 +1252,7 @@ color: #9e9e9e ;
     width: 60%;
     margin: auto;
     justify-content: space-around;
+    padding-bottom: 50px;
 }
 #ten>:first-child>img{
     width: 70%;
